@@ -1,15 +1,15 @@
 import React from "react";
 // import { Card, Button } from "react-bootstrap";
 import { Box, Button, Card, CardBody, CardFooter, Divider, Image, Stack, Text } from '@chakra-ui/react'
-const ProductCard1 = props => {
+const BrandCard = props => {
   return (
     <>
 <Card maxW='sm'>
   <CardBody>
-    <Image
+    <Image 
       src={props.imgSrc}
       alt='images'
-      borderRadius='lg'
+    
     />
     <Stack mt='6' spacing='3'>
       <Text size='md'textAlign={"left"}>{props.productdetail}</Text>
@@ -37,4 +37,4 @@ const ProductCard1 = props => {
   );
 };
 
-export default ProductCard1;
+export default BrandCard;
