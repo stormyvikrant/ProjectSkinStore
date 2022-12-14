@@ -21,7 +21,7 @@ import BrandSlider from './Slider/BrandSlider';
 
 const Home = () => {
   return (
-    <div>
+    <div >
 
       {/* **********************************************************First section************************************** */}
               {/* <Box border="1px solid black">

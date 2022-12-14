@@ -41,6 +41,8 @@ const Navbar = () => {
           backgroundColor: "#F2F2F2",
           padding: "10px",
           paddingRight: "30px",
+          position:"sticky"
+          
         }}
       >
         <Box
@@ -58,6 +60,7 @@ const Navbar = () => {
               alignItems: "center",
               justifyContent: "center",
               gap: "10px",
+
             }}
           >
             <img
@@ -68,8 +71,9 @@ const Navbar = () => {
           </Box>
         </Box>
       </Box>
-
-      <Box id="after-top">
+<Box position={'fixed'} top='0px' zIndex={100} bgColor='white' w='100%'>
+    <Box id="after-top"  >
+        
         <Box>
           <Image
             className="logo"
@@ -143,7 +147,7 @@ const Navbar = () => {
         </div>
       </Box>
 
-      <Box id="menu_nav" style={{ borderTop: "2px solid black" }}>
+      <Box id="menu_nav" style={{ borderTop: "2px solid black" }} borderBottom='1px solid gainsboro'>
         <Box
           alignItems="center"
           display="flex"
@@ -714,9 +718,11 @@ const Navbar = () => {
           </div>
         </Box>
       </Box>
+</Box>
+    
 
       <Box bgColor="#f2f2f2" alignItems="center" id="bottom_nav">
-        <Box
+        <Box mt={120}
           alignItems="center"
           display="flex"
           py={5}
