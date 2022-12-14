@@ -22,6 +22,7 @@ import BrandSlider from './Slider/BrandSlider';
 const Home = () => {
   return (
     <div>
+
       {/* **********************************************************First section************************************** */}
               {/* <Box border="1px solid black">
                   <Center>
@@ -46,6 +47,13 @@ const Home = () => {
               </Grid>
               </Center>
               </Box> */}
+
+
+      
+
+      {/* **********************************************************First section************************************** */}
+              
+
               {/* **********************************************************Slider ************************************** */}
               <Box marginBottom={12}>
                 <SliderImage/> 
@@ -290,7 +298,11 @@ const Home = () => {
 <Image src='https://static.thcdn.com/images/xlarge/webp/widgets/121-us/32/original-0308-STDCRE32346-SS-AH-SkinStore-Concierge-Banners-1180x200-084632.jpg' alt='img1'/>
 </Link>
 </Box>
+
 </Center>
+
+
+
     </div>
   );
 }

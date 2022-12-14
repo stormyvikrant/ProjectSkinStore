@@ -8,7 +8,7 @@ import React from 'react';
 const Skin = () => {
   return (
     <div>
-      
+      <h1>Hi</h1>
     </div>
   );
 }
