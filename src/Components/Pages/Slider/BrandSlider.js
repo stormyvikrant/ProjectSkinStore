@@ -1,37 +1,38 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import ProductCard1 from "./ProductCard1";
+// import ProductCard1 from "./ProductCard1";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./ProductSlider.css";
+import "./Brandslider.css";
+import BrandCard from "./BrandCard";
 
-class ProductSlider1 extends Component {
+class BrandSlider extends Component {
   constructor() {
     super();
     this.state = {
-      slides: [
+      branddata: [
         {
-          img: "https://static.thcdn.com/images/xsmall/webp//productimg/original/13973768-8004998593922840.jpg",
+          img: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12741973-8954986062768091.jpg",
           productdetail:"Chantecaille The Ultimate Lifting Duo (Worth $625.00)",
              discountmessage:"25% off with code REPLAY",
              price:"$550"
         
         },
         {
-          img: "https://static.thcdn.com/images/xsmall/webp//productimg/original/13973771-3984998807083745.jpg",
+          img: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12658446-2894971372229173.jpg",
           productdetail:"Eve Lom Decadent Double  Holiday Set 2022 (Worth $235.00)",
              discountmessage:"25% off with code REPLAY",
              price:"$350"
         },
         {
-          img: "https://static.thcdn.com/images/xsmall/webp//productimg/original/13899712-9554998013127739.jpg",
+          img: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/13883317-8014988987514489.jpg",
           productdetail:"Elemis Cleanse and Pro-Collagen Tale Set (Worth $165.00)",
              discountmessage:"25% off with code REPLAY",
              price:"$250"
         },
         {
-          img: "https://static.thcdn.com/images/xsmall/webp//productimg/original/13885104-1174996677060855.jpg",
+          img: "https://static.thcdn.com/images/large/webp//productimg/1600/1600/13903619-1444998250558359.jpg",
           productdetail:"Molton Brown Festive Bauble Gift Set",
              discountmessage:"25% off with code REPLAY",
              price:"$350"
@@ -80,7 +81,7 @@ class ProductSlider1 extends Component {
       dots: false,
       infinite: false,
       speed: 500,
-      slidesToShow: 4,
+      slidesToShow: 3,
       slidesToScroll: 4,
       initialSlide: 0,
       responsive: [
@@ -96,16 +97,16 @@ class ProductSlider1 extends Component {
         {
           breakpoint: 600,
           settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
+            slidesToShow: 1,
+            slidesToScroll: 1,
             initialSlide: 2
           }
         },
         {
           breakpoint: 480,
           settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2
+            slidesToShow: 1,
+            slidesToScroll: 1
           }
         }
       ]
@@ -113,10 +114,10 @@ class ProductSlider1 extends Component {
     return (
       <div>
         <Slider {...settings}>
-          {this.state.slides.map((slide, index) => {
+          {this.state.branddata.map((slide, index) => {
             return (
               <div key={index}>
-                <ProductCard1 imgSrc={slide.img} productdetail={slide.productdetail} discountmessage={slide.discountmessage} price={slide.price}/>
+                <BrandCard imgSrc={slide.img} productdetail={slide.productdetail} discountmessage={slide.discountmessage} price={slide.price}/>
                 {/* <img src={slide.img} alt={`slide${index}`} /> */}
               </div>
             );
@@ -127,4 +128,4 @@ class ProductSlider1 extends Component {
   }
 }
 
-export default ProductSlider1;
+export default BrandSlider;
