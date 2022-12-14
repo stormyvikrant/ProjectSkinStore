@@ -24,6 +24,9 @@ const Home = () => {
 
   return (
     <div>
+
+      
+
       {/* **********************************************************First section************************************** */}
               <Box border="1px solid black">
                   <Center>
@@ -94,6 +97,7 @@ const Home = () => {
 <ProductSlider1/>
 
 </Box>
+
     </div>
   );
 }
