@@ -11,6 +11,7 @@ import {
   DrawerHeader,
   DrawerOverlay,
   Flex,
+  Image,
   Input,
   InputGroup,
   InputRightElement,
@@ -70,7 +71,7 @@ const Navbar = () => {
 
       <Box id="after-top">
         <Box>
-          <img
+          <Image
             className="logo"
             src="https://seeklogo.com/images/S/skinstore-logo-5281C41BD3-seeklogo.com.png"
             alt="logo"
