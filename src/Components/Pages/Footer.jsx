@@ -23,6 +23,7 @@ const legal = ["Cookie Information", "Privacy Policy", "Terms & Conditions", "Mo
 
 const Footer = () => {
   return (
+
     <Box mt="100px" borderTop="1px solid black">
       <Box w="90%" m="auto">
         <Flex direction={["column", "row"]} mt="25px" textAlign="left">
@@ -128,15 +129,6 @@ const Footer = () => {
         </Flex>
       </Box>
     </Box>
-
-
-
-
-
-
-
-
-
   );
 }
 
