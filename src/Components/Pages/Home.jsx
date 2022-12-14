@@ -62,7 +62,7 @@ const Home = () => {
          <Text fontSize={45}>Shop by Category</Text>
 <Box mt={8} alignItems='center' w='85%' margin='auto'>
   
-      <Flex  flexWrap="wrap" >
+      <Box display={['grid','grid','flex']} justifyContent='space-between' gridTemplateColumns={'1fr 1fr'} >
  <Link>
  <Image w={205} src='https://static.thcdn.com/images/small/webp/widgets/121-us/04/round_widget_ss_homepage_-_Untitled_Page-062904.png' alt="cat-1"/>
  </Link>
@@ -81,7 +81,7 @@ const Home = () => {
  <Link>
  <Image w={205} src="https://static.thcdn.com/images/small/webp/widgets/121-us/32/round_widget_ss_homepage_-_Untitled_Page_%285%29-063132.png" alt="cat-6"/>
  </Link>
-  </Flex>
+  </Box>
 
 </Box>
 

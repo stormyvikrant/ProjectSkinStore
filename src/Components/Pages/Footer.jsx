@@ -34,7 +34,7 @@ const Footer = () => {
           <Box w={["100%", "50%"]} pb="25px">
             <Heading fontSize="md" mb="20px" >Connect with us</Heading>
             <Flex>
-              {socialLinks.map((s) => <Circle mr="10px" as="img" w="35px" src={s} />)}
+              {socialLinks.map((s) => <Image mr="10px" as="img" w="35px" src={s} />)}
             </Flex>
           </Box>
         </Flex>
