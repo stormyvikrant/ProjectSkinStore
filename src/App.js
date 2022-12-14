@@ -6,11 +6,11 @@ import Navbar from './Components/Pages/Navbar';
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-      <hr/>
-    <Home/>
-    <hr/>
-    <Footer/>
+      <Navbar />
+      <hr />
+      <Home />
+      <hr />
+      <Footer />
     </div>
   );
 }
