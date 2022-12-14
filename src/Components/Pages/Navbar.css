@@ -14,7 +14,12 @@
 #search-bar{
     width: 500px;
 }
-
+#sticky{
+  position: fixed;
+   width: 100%;
+   z-index: 8;
+   background-color: white;
+}
 
 
 .cartValue{

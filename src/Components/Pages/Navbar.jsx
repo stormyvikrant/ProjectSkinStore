@@ -34,7 +34,7 @@ const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
   return (
-    <div>
+    <div id="sticky">
       <Box
         style={{
           backgroundColor: "#F2F2F2",
@@ -142,7 +142,7 @@ const Navbar = () => {
         </div>
       </Box>
 
-      <Box id="menu_nav" style={{ borderTop: "2px solid black" }}>
+      <Box id="menu_nav" style={{ borderTop: "2px solid black", boxShadow: "rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset" }}>
         <Box
           alignItems="center"
           display="flex"
@@ -714,37 +714,7 @@ const Navbar = () => {
         </Box>
       </Box>
 
-      <Box bgColor="#f2f2f2" alignItems="center" id="bottom_nav">
-        <Box
-          alignItems="center"
-          display="flex"
-          py={5}
-          pl={20}
-          pr={20}
-          fontSize="14px"
-          justifyContent="space-evenly"
-        >
-          <Box display="flex" alignItems="center" gap="10px">
-            <FaShippingFast size="1.5em" />
-            <p>FREE US Sheeping Over $49</p>
-          </Box>
-
-          <Box display="flex" alignItems="center" gap="10px">
-            <RiCoinsFill size="1.5em" />
-            <p> Refer a Friend, Get $15</p>
-          </Box>
-
-          <Box display="flex" alignItems="center" gap="10px">
-            <RiBattery2ChargeFill size="1.5em" />
-            <p> New Customers Save 20% - Use Code NEWBIE</p>
-          </Box>
-
-          <Box display="flex" alignItems="center" gap="10px">
-            <MdOutlineSmartphone size="1.5em" />
-            <p>Download Our App</p>
-          </Box>
-        </Box>
-      </Box>
+      
 
       <div id="mobile_bar">
         <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
