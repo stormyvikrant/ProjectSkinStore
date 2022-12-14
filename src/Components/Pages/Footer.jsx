@@ -9,7 +9,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <div>
-      <Text>Footer</Text>
+     
     </div>
   );
 }

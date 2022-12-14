@@ -9,7 +9,7 @@ import React from 'react';
 const Home = () => {
   return (
     <div>
-      <Heading>Welcome to Home Page</Heading>
+      
     </div>
   );
 }
