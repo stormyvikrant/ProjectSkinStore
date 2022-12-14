@@ -28,29 +28,7 @@ const Home = () => {
       
 
       {/* **********************************************************First section************************************** */}
-              <Box border="1px solid black">
-                  <Center>
-                  <Grid templateColumns='repeat(4, 1fr)' gap={8}  bg="offwhite" w='70%'>
-              <Box display='flex' gap={3} h={10} mt={3}>
-              <GrDeliver size={25}/> 
-              <h1>FREE US Shipping Over $49</h1>
-              </Box>
-              <Box display='flex' gap={3} h={10} mt={3}>
-              <VscReferences size={25}/> 
-              <h1>Refer a Friend, Get $15</h1>
-              </Box>
-              <Box display='flex' gap={3} h={10} mt={3}>
-              <RiBatterySaverLine size={25}/> 
-              <h1> New Customers Save 20% </h1>
-              </Box>
-              <Box display='flex' gap={3} h={10} mt={3}>
-              <ImMobile size={25}/> 
-              <h1> Download Our App</h1>
-              </Box>
-
-              </Grid>
-              </Center>
-              </Box>
+              
               {/* **********************************************************Slider ************************************** */}
               <Box marginBottom={12}>
                 <SliderImage/> 
