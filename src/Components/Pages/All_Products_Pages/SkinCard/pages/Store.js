@@ -55,9 +55,6 @@ const Shop = () => {
 
                                 <Box display='flex' alignItems='baseline'>
 
-                                    
-                                    
-
                                     <Badge borderRadius='full' px='2' colorScheme='gray'>
                                         Category
                                     </Badge>

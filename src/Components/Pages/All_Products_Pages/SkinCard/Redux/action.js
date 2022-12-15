@@ -51,3 +51,4 @@ export const fetchAllProducts = () => {
         data && dispatch(allProducts(data));
     };
 };
+
