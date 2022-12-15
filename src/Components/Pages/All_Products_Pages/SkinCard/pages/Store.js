@@ -105,7 +105,7 @@ const Shop = () => {
                                 </Box>
 
                                 <Box w='full' as='button' mt={ 10 } onClick={ () => handleCart(item) }>
-                                    <Button w='full' bg='black' color='white' _hover={ { color: 'black', bg: "teal.200", border: '1px solid black' } } >+ADD TO CART</Button>
+                                    <Button w='full' bg='black' color='white' _hover={ { color: 'black', bg: "teal.200", border: '1px solid black' } } >Quick Buy</Button>
                                 </Box>
 
                             </Box>
