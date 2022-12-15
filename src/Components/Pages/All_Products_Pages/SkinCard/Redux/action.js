@@ -45,9 +45,12 @@ export const deleteAllFromCart = () => ({
         //* fetchall products 
 export const fetchAllProducts = () => {
     return async (dispatch) => {
-        let res = await fetch("https://fakestoreapi.com/products");
+        let res = await fetch("https://makeup-api.herokuapp.com/api/v1/products.json");
         let data = await res.json();
         //   console.log('data', data)
         data && dispatch(allProducts(data));
+        console.log(data);
     };
 };
+
+
