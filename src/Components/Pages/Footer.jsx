@@ -1,4 +1,4 @@
-import { Box, Button, Circle, Flex, Heading, List, Text, Image } from '@chakra-ui/react';
+import { Box, Button, Flex, Heading,  Text, Image } from '@chakra-ui/react';
 import { IoMdCall } from 'react-icons/io';
 import { FaTruckMoving } from "react-icons/fa"
 import { BsArrowClockwise } from "react-icons/bs"

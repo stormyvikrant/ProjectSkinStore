@@ -5,7 +5,7 @@
 
 import React from 'react';
 
-const Skin = () => {
+const SkinCare = () => {
   return (
     <div>
       <h1>Hi</h1>
@@ -13,4 +13,4 @@ const Skin = () => {
   );
 }
 
-export default Skin;
+export default SkinCare;
