@@ -1,17 +1,19 @@
-import "./App.css";
-import Footer from "./Components/Pages/Footer";
-import Home from "./Components/Pages/Home";
-import Navbar from "./Components/Pages/Navbar";
-import Login from "./Components/AuthPages/Login";
+
+import './App.css';
+import AllRoutes from './Components/AllContext/AllRoutes';
+import Footer from './Components/AllContext/Pages/Footer';
+// import Home from './Components/Pages/Home';
+import Navbar from './Components/Navbar/Navbar';
+// <Home />
+// <hr />
+// <Footer />
 function App() {
   return (
     <div className="App">
-      <Login />
       <Navbar />
-      <hr />
-      <Home />
-      <hr />
-      <Footer />
+      <AllRoutes/>
+ 
+      <Footer/>
     </div>
   );
 }

@@ -1,0 +1,73 @@
+/* .App {
+    font-family: sans-serif;
+    text-align: center;
+  } */
+  .slick-track {
+    display: flex;
+  }
+  .slick-slider {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .slick-slide {
+    padding-right: 10px;
+  }
+  
+  .slick-slide:last-child {
+    padding-right: 0;
+  }
+  .slick-slide img {
+    display: block;
+  }
+  .slick-list {
+    margin: 0 15px;
+  }
+  
+  .slick-prev {
+    width: 45px;
+    left: 0;
+    top: 40%;
+    position: absolute;
+    height: 55px;
+    background: gray;
+    z-index: 1;
+  
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  }
+  
+  .slick-next {
+    width: 45px;
+    right: 0;
+    top: 40%;
+    position: absolute;
+    height: 55px;
+    background: gray;
+    z-index: 1;
+  
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  }
+  
+  .slick-prev:focus,
+  .slick-prev:hover,
+  .slick-next:hover,
+  .slick-next:focus {
+    color: transparent;
+    outline: none;
+    background: gray;
+  }
+  .product-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+  /* .hidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+  } */
+  

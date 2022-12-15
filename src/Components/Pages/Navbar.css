@@ -1,0 +1,155 @@
+#after-top{
+    padding: 40px;
+    display: flex;
+    gap : 100px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logo{
+    min-width: 150px;
+    height: 40px;
+}
+
+#search-bar{
+    width: 500px;
+}
+
+
+
+.cartValue{
+    border: 1px solid black;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    position: absolute;
+    text-align: center;
+    right: -18px; top: -13px; 
+    font-size: 12px;
+    
+}
+#cart-icon{
+    position: relative;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    
+  }
+  
+  .dropdown-content {
+    margin-top: 20px;
+
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f1f1f1;
+   
+    min-width: 318px;
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+  
+    z-index: 1;
+  }
+  
+  .dropdown-content p {
+    font-size: 14px;
+    color:  black;
+
+    text-decoration: none;
+    margin: 10px;
+    display: block;
+  }
+
+  .dropdown:hover .dropdown-content {display: block;}
+ 
+  #dropdown-account{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    
+    
+  }
+  #dropdown-account-content{
+    position: absolute;
+    display: none;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    height: auto;
+    min-width: 320px;
+    right: 10;
+    margin-top: 20px;
+    padding: 20px;
+    z-index: 10;
+
+  }
+  #dropdown-account:hover #dropdown-account-content{
+    display: block;
+  }
+ 
+ 
+  #menu-dropdown{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .menu-dropdown-content{
+    position: absolute;
+    display: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: white;
+    height: auto;
+    top: 10;
+    left: 0;
+    width: 1000px;
+    z-index: 2;
+    cursor: pointer;
+   
+  }
+
+ #menu-title{
+   padding: 10px;
+   cursor: pointer;
+  }
+  #menu-title:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+
+  }
+
+  #menu-dropdown:hover .menu-dropdown-content{
+    display: block;
+    cursor: pointer;
+  }
+
+  @media only screen and (max-width: 1300px) {
+    #after-top{
+      display: none;
+    }
+    #menu_nav{
+      display: none;
+    }
+    #bottom_nav{
+      display: none;
+    }
+    #mobile_bar{
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+  }
+
+  @media only screen and (min-width: 1301px) {
+    #mobile_bar{
+      display: none
+    };
+  }
