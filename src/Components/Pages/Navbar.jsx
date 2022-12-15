@@ -7,7 +7,6 @@ import {
   DrawerBody,
   DrawerCloseButton,
   DrawerContent,
-  DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
   Flex,
@@ -20,7 +19,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import "../Pages/Navbar.css";
-import { HamburgerIcon, Search2Icon, SearchIcon } from "@chakra-ui/icons";
+import {Search2Icon } from "@chakra-ui/icons";
 import { VscAccount } from "react-icons/vsc";
 import { FaShippingFast, FaShoppingCart } from "react-icons/fa";
 import { RiBattery2ChargeFill, RiCoinsFill } from "react-icons/ri";
@@ -30,6 +29,7 @@ import { TbDiscount2, TbGift } from "react-icons/tb";
 import {HiMenu} from "react-icons/hi"
 import { VscReferences } from "react-icons/vsc";
 import {CgSearch} from "react-icons/cg"
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -63,7 +63,7 @@ const Navbar = () => {
 
             }}
           >
-            <img
+            <Image
               style={{ width: "20px", height: "20px", borderRadius: "50%" }}
               src="https://cdn.britannica.com/33/4833-004-828A9A84/Flag-United-States-of-America.jpg"
             />
@@ -75,11 +75,14 @@ const Navbar = () => {
     <Box id="after-top"  >
         
         <Box>
-          <Image
+          <Link to='/'>
+            <Image
             className="logo"
             src="https://seeklogo.com/images/S/skinstore-logo-5281C41BD3-seeklogo.com.png"
             alt="logo"
           />
+          </Link>
+        
         </Box>
 
         <div id="search-bar">
@@ -156,9 +159,9 @@ const Navbar = () => {
           margin="auto"
           id="hover-black"
         >
-          <div id="menu-title">Brands</div>
+     <Link to='/brands'><div id="menu-title">Brands</div></Link>     
           <div id="menu-dropdown">
-            <div id="menu-title">Holiday Gifts</div>
+           <Link to='/holiday'><div id="menu-title">Holiday Gifts</div></Link> 
             <div className="menu-dropdown-content">
               <Box display="flex" gap="50px" pt={5} padding="20px">
                 <div style={{ fontFamily: "sans-serif", paddingLeft: "20px" }}>
@@ -181,12 +184,12 @@ const Navbar = () => {
                       gap: "10px",
                     }}
                   >
-                    <p>Show All Products by Beuty Gift</p>
-                    <p>Our Favorite Beuty Gift Sets</p>
-                    <p>Skinstore Exclusive Gifts</p>
-                    <p>SkinStore's Holiday Edit Box</p>
-                    <p>Holiday Gift Ideas for Her</p>
-                    <p>Holiday Gift Ideas for Him</p>
+                    <Link to='/holiday'><p>Show All Products by Beuty Gift</p></Link>
+                 <Link to='/holiday'>   <p>Our Favorite Beuty Gift Sets</p></Link>
+              <Link to='/holiday'>      <p>Skinstore Exclusive Gifts</p></Link>
+                 <Link to='/holiday'>   <p>SkinStore's Holiday Edit Box</p></Link>
+               <Link to='/holiday'>     <p>Holiday Gift Ideas for Her</p></Link>
+               <Link to='/holiday'>     <p>Holiday Gift Ideas for Him</p></Link>
                   </div>
                 </div>
                 <div style={{ fontFamily: "sans-serif", paddingLeft: "20px" }}>
@@ -209,12 +212,12 @@ const Navbar = () => {
                       gap: "10px",
                     }}
                   >
-                    <p>Budget Friendly and Small Gifts</p>
-                    <p>Stocking Stuffer Ideas</p>
-                    <p>Thoughtful Gifts for Smart Splurges</p>
-                    <p>Luxury Holiday Gifts</p>
-                    <p> Last Minute Gift Ideas</p>
-                    <p>Gifts For You</p>
+                   <Link to='/holiday'> <p>Budget Friendly and Small Gifts</p></Link>
+                   <Link to='/holiday'> <p>Stocking Stuffer Ideas</p></Link>
+                   <Link to='/holiday'> <p>Thoughtful Gifts for Smart Splurges</p></Link>
+                   <Link to='/holiday'> <p>Luxury Holiday Gifts</p></Link>
+                   <Link to='/holiday'> <p> Last Minute Gift Ideas</p></Link>
+                   <Link to='/holiday'> <p>Gifts For You</p></Link>
                   </div>
                 </div>
 
@@ -238,10 +241,10 @@ const Navbar = () => {
                       gap: "10px",
                     }}
                   >
-                    <p>Gifts Under $25</p>
-                    <p>Gifts Under $50</p>
-                    <p>Gifts Under $100</p>
-                    <p>Gifts Over $100</p>
+                    <Link to='/holiday'><p>Gifts Under $25</p></Link>
+                    <Link to='/holiday'><p>Gifts Under $50</p></Link>
+                    <Link to='/holiday'><p>Gifts Under $100</p></Link>
+                    <Link to='/holiday'><p>Gifts Over $100</p></Link>
                   </div>
                 </div>
 
@@ -265,12 +268,12 @@ const Navbar = () => {
                       gap: "10px",
                     }}
                   >
-                    <p>Skin Care Gifts</p>
-                    <p>Body Care Gifts</p>
-                    <p>Home Scents and Candle Gifts</p>
-                    <p>Makeup Gifts</p>
-                    <p>Hair Care Gifts</p>
-                    <p>Beauty Tools and Hair Styling Gifts</p>
+                    <Link to='/holiday'><p>Skin Care Gifts</p></Link>
+                    <Link to='/holiday'><p>Body Care Gifts</p></Link>
+                    <Link to='/holiday'><p>Home Scents and Candle Gifts</p></Link>
+                    <Link to='/holiday'><p>Makeup Gifts</p></Link>
+                    <Link to='/holiday'><p>Hair Care Gifts</p></Link>
+                    <Link to='/holiday'><p>Beauty Tools and Hair Styling Gifts</p></Link>
                   </div>
                 </div>
               </Box>
@@ -278,7 +281,7 @@ const Navbar = () => {
           </div>
 
           <div id="menu-dropdown">
-            <div id="menu-title">Sales</div>
+           <Link to='/sale'> <div id="menu-title">Sales</div></Link>
             <div className="menu-dropdown-content">
               <Box display="flex" gap="50px" pt={5} padding="20px">
                 <div style={{ display: "flex", gap: "20px" }}>
@@ -296,7 +299,7 @@ const Navbar = () => {
                     >
                       <Flex gap={4} alignItems="center">
                         <BiDollar size="1.5em" />
-                        <p style={{ fontSize: "20px" }}>Sale</p>
+                        <Link to='/sale'> <p style={{ fontSize: "20px" }}>Sale</p></Link>
                       </Flex>
                     </div>
                     <div
@@ -313,7 +316,7 @@ const Navbar = () => {
                     >
                       <Flex gap={4} alignItems="center">
                         <MdLocalOffer size="1.5em" />
-                        <p style={{ fontSize: "18px" }}>All Coupons</p>
+                        <Link to='/sale'><p style={{ fontSize: "18px" }}>All Coupons</p></Link>
                       </Flex>
                     </div>
                   </div>
@@ -331,7 +334,7 @@ const Navbar = () => {
                       }}
                     >
                       <Flex gap={4} alignItems="center">
-                        <p style={{ fontSize: "18px" }}>Key Workers Discount</p>
+                      <Link to='/sale'><p style={{ fontSize: "18px" }}>Key Workers Discount</p></Link>
                       </Flex>
                     </div>
                     <div
@@ -348,7 +351,7 @@ const Navbar = () => {
                     >
                       <Flex gap={4} alignItems="center">
                         <TbDiscount2 size="1.5em" />
-                        <p style={{ fontSize: "18px" }}>Fetures Offer</p>
+                        <Link to='/sale'><p style={{ fontSize: "18px" }}>Fetures Offer</p></Link>
                       </Flex>
                     </div>
                   </div>
@@ -396,7 +399,7 @@ const Navbar = () => {
           </div>
 
           <div id="menu-dropdown">
-            <div id="menu-title">Skin Care</div>
+            <Link to="/skincare"><div id="menu-title">Skin Care</div></Link>
             <div className="menu-dropdown-content">
               <Box display="flex" gap="50px" pt={5} padding="20px">
                 <div style={{ fontFamily: "sans-serif", paddingLeft: "20px" }}>
@@ -419,13 +422,13 @@ const Navbar = () => {
                       gap: "10px",
                     }}
                   >
-                    <p>View All Skin Care</p>
-                    <p>New In</p>
-                    <p>Clean Skincare</p>
-                    <p>5 Rated Products</p>
-                    <p>Gift and Sets</p>
-                    <p>Suprizes & Duo</p>
-                    <p>Travel Sizes</p>
+                    <Link to="/skin"><p>View All Skin Care</p></Link>
+                    <Link to="/skin"><p>New In</p></Link>
+                    <Link to="/skin"><p>Clean skincare</p></Link>
+                    <Link to="/skin"><p>5 Rated Products</p></Link>
+                    <Link to="/skin"><p>Gift and Sets</p></Link>
+                    <Link to="/skin"><p>Suprizes & Duo</p></Link>
+                    <Link to="/skin"><p>Travel Sizes</p></Link>
                   </div>
                 </div>
                 <div style={{ fontFamily: "sans-serif", paddingLeft: "20px" }}>
@@ -448,12 +451,12 @@ const Navbar = () => {
                       gap: "10px",
                     }}
                   >
-                    <p>Cleaners</p>
-                    <p>Moisturizers</p>
-                    <p>Serums</p>
-                    <p>Eye Serum</p>
-                    <p>Exfoliators</p>
-                    <p>Masks</p>
+                    <Link to="/skin"><p>Cleaners</p></Link>
+                    <Link to="/skin"><p>Moisturizers</p></Link>
+                    <Link to="/skin"><p>Serums</p></Link>
+                    <Link to="/skin"><p>Eye Serum</p></Link>
+                    <Link to="/skin"><p>Exfoliators</p></Link>
+                    <Link to="/skin"><p>Masks</p></Link>
                   </div>
                 </div>
 
@@ -477,12 +480,12 @@ const Navbar = () => {
                       gap: "10px",
                     }}
                   >
-                    <p>Vitamin C</p>
-                    <p>AHA</p>
-                    <p>Caffeine</p>
-                    <p>Retinol</p>
-                    <p>Lactic Acid</p>
-                    <p>Salicylic Acid</p>
+                    <Link to="/skin"><p>Vitamin C</p></Link>
+                    <Link to="/skin"><p>AHA</p></Link>
+                    <Link to="/skin"><p>Caffeine</p></Link>
+                    <Link to="/skin"><p>Retinol</p></Link>
+                    <Link to="/skin"><p>Lactic Acid</p></Link>
+                    <Link to="/skin"><p>Salicylic Acid</p></Link>
                   </div>
                 </div>
 
@@ -535,12 +538,12 @@ const Navbar = () => {
                       gap: "10px",
                     }}
                   >
-                    <p>Take the SPF Quiz</p>
-                    <p>SPF 30 and Over</p>
-                    <p>SPF 50 and Over</p>
-                    <p>After Sun</p>
-                    <p>Tinted</p>
-                    <p>Mineral</p>
+                    <Link to="/skin"><p>Take the SPF Quiz</p></Link>
+                    <Link to="/skin"><p>SPF 30 and Over</p></Link>
+                    <Link to="/skin"><p>SPF 50 and Over</p></Link>
+                    <Link to="/skin"><p>After Sun</p></Link>
+                    <Link to="/skin"><p>Tinted</p></Link>
+                    <Link to="/skin"><p>Mineral</p></Link>
                   </div>
                 </div>
               </Box>
@@ -548,7 +551,7 @@ const Navbar = () => {
           </div>
 
           <div id="menu-dropdown">
-            <div id="menu-title">Hair</div>
+           <Link to='/hair'><div id="menu-title">Hair</div></Link> 
             <div className="menu-dropdown-content">
               <Box display="flex" gap="50px" pt={5} padding="20px">
                 <div style={{ fontFamily: "sans-serif", paddingLeft: "20px" }}>
@@ -571,12 +574,12 @@ const Navbar = () => {
                       gap: "10px",
                     }}
                   >
-                    <p>View All Hair Care</p>
-                    <p>New In</p>
-                    <p>Clean Hair Care</p>
-                    <p>5 Rated Products</p>
-                    <p>Gift and Sets</p>
-                    <p>Travel Sizes</p>
+                   <Link to='/hair'><p>View All Hair Care</p></Link>
+                   <Link to='/hair'><p>New In</p></Link>
+                   <Link to='/hair'><p>Clean Hair Care</p></Link>
+                   <Link to='/hair'><p>5 Rated Products</p></Link>
+                   <Link to='/hair'><p>Gift and Sets</p></Link>
+                   <Link to='/hair'><p>Travel Sizes</p></Link>
                   </div>
                 </div>
                 <div style={{ fontFamily: "sans-serif", paddingLeft: "20px" }}>
@@ -599,12 +602,12 @@ const Navbar = () => {
                       gap: "10px",
                     }}
                   >
-                    <p>Shampoo</p>
-                    <p>Conditioners</p>
-                    <p>Hair Treatments</p>
-                    <p>Hair Masks</p>
-                    <p>Hair Oils</p>
-                    <p>Hair Sprays</p>
+                   <Link to='/hair'> <p>Shampoo</p></Link>
+                   <Link to='/hair'> <p>Conditioners</p></Link>
+                   <Link to='/hair'> <p>Hair Treatments</p></Link>
+                   <Link to='/hair'> <p>Hair Masks</p></Link>
+                   <Link to='/hair'> <p>Hair Oils</p></Link>
+                   <Link to='/hair'> <p>Hair Sprays</p></Link>
                   </div>
                 </div>
 
@@ -628,12 +631,12 @@ const Navbar = () => {
                       gap: "10px",
                     }}
                   >
-                    <p>Anti Dandruff Scale Care</p>
-                    <p>Coarse & Textured Hair</p>
-                    <p>Colored hair</p>
-                    <p>Curly & Wavy Hair</p>
-                    <p>Damaged Hair</p>
-                    <p>Dry Hair</p>
+                    <Link to='/hair'><p>Anti Dandruff Scale Care</p></Link>
+                    <Link to='/hair'><p>Coarse & Textured Hair</p></Link>
+                    <Link to='/hair'><p>Colored hair</p></Link>
+                    <Link to='/hair'><p>Curly & Wavy Hair</p></Link>
+                    <Link to='/hair'><p>Damaged Hair</p></Link>
+                    <Link to='/hair'><p>Dry Hair</p></Link>
                   </div>
                 </div>
 
@@ -683,9 +686,9 @@ const Navbar = () => {
                       gap: "10px",
                     }}
                   >
-                    <p>Hair Removal Devices</p>
-                    <p>Hair Removal Products</p>
-                    <p>Men Shaving Products</p>
+                  <Link to='/hair'><p>Hair Removal Devices</p></Link>
+                  <Link to='/hair'><p>Hair Removal Products</p></Link>
+                  <Link to='/hair'><p>Men Shaving Products</p></Link>
                   </div>
                 </div>
               </Box>
@@ -693,28 +696,28 @@ const Navbar = () => {
           </div>
 
           <div>
-            <div id="menu-title">Makeup</div>
+          <Link to='/makeup'><div id="menu-title">Makeup</div></Link>
           </div>
           <div>
-            <div id="menu-title">Bath & Body</div>
+           <Link to='/bathbeauty'><div id="menu-title">Bath & Body</div></Link> 
           </div>
           <div>
-            <div id="menu-title">Fragrence</div>
+           <Link to='/fragrence'><div id="menu-title">Fragrence</div></Link> 
           </div>
           <div>
-            <div id="menu-title">Self Care</div>
+           <Link><div id="menu-title">Self Care</div></Link> 
           </div>
           <div>
-            <div id="menu-title">Tools</div>
+            <Link to='/tools'><div id="menu-title">Tools</div></Link>
           </div>
           <div>
-            <div id="menu-title">News & Trending</div>
+            <Link to='/news'><div id="menu-title">News & Trending</div></Link>
           </div>
           <div>
-            <div id="menu-title">Build a Routine</div>
+            <Link to='/building'><div id="menu-title">Build a Routine</div></Link>
           </div>
           <div>
-            <div id="menu-title">Blog</div>
+            <Link to='/blog'><div id="menu-title">Blog</div></Link>
           </div>
         </Box>
       </Box>
