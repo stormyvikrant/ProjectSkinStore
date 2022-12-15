@@ -48,7 +48,7 @@ const Shop = () => {
                     { products && products.map((item) => (
                         <Box key={ item.id } borderWidth='1px' borderRadius='lg' overflow='hidden' boxShadow= 'rgba(0, 0, 0, 0.04) 0px 3px 5px'>
 
-                            <Image src={ item.image } alt={ item.category } h='200px' w='full' p='2'
+                            <Image src={ item.image_link } alt={ item.category } h='200px' w='full' p='2'
                                 objectFit='contain' />
 
                             <Box p='6'>
@@ -81,7 +81,7 @@ const Shop = () => {
                                     lineHeight='tight'
                                     noOfLines={ 1 }
                                 >
-                                    { item.title }
+                                    { item.name }
                                     </Box>
 
                                 
@@ -96,11 +96,11 @@ const Shop = () => {
                                         .map((_, i) => (
                                             <Icon as={ AiFillStar }
                                                 key={ i }
-                                                color={ i < item.rating.rate ? 'orange.400' : 'gray.300' }
+                                                color={ i < item.price.rate ? 'orange.400' : 'gray.300' }
                                             />
                                         )) }
                                     <Box as='span' ml='2' color='gray.600' fontSize='sm'>
-                                        { item.rating.count } reviews
+                                        { item.price.count } reviews
                                     </Box>
                                 </Box>
 
