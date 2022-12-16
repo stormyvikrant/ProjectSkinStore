@@ -551,7 +551,7 @@ const Navbar = () => {
           </div>
 
           <div id="menu-dropdown">
-           <Link to='/hair'><div id="menu-title">Hair</div></Link> 
+           <Link to='/haircare'><div id="menu-title">Hair</div></Link> 
             <div className="menu-dropdown-content">
               <Box display="flex" gap="50px" pt={5} padding="20px">
                 <div style={{ fontFamily: "sans-serif", paddingLeft: "20px" }}>

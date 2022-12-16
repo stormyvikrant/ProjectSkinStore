@@ -10,6 +10,7 @@ import BuildingRoute from '../Pages/All_Products_Pages/BuildingRoute';
 import Checkout from '../Pages/All_Products_Pages/Checkout';
 import Fragrence from '../Pages/All_Products_Pages/Fragrence';
 import Hair from '../Pages/All_Products_Pages/Hair';
+import HairPage from '../Pages/All_Products_Pages/HairPages';
 import Holiday from '../Pages/All_Products_Pages/Holiday';
 import Makeup from '../Pages/All_Products_Pages/Makeup';
 import NewsTrending from '../Pages/All_Products_Pages/NewsTrending';
@@ -43,6 +44,7 @@ const AllRoutes = () => {
         <Route path='/tools' element={<Tools/>}/>
         <Route path='checkout' element={<Checkout/>}/>
         <Route path='/skincare' element={<SkinPage/>}/>
+        <Route path='/haircare' element={<HairPage/>}/>
       </Routes>
     </div>
   );
