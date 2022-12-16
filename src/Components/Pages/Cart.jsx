@@ -25,14 +25,22 @@ import {
 import { AiFillLock } from "react-icons/ai";
 import { CheckCircleIcon, InfoIcon, SmallCloseIcon } from "@chakra-ui/icons";
 import { BsGiftFill } from "react-icons/bs";
-import {FaCcAmazonPay, FaCcApplePay, FaCcPaypal, FaGooglePay} from "react-icons/fa"
-import {SiPaytm} from "react-icons/si"
+import { FaCcAmazonPay, FaCcApplePay, FaCcPaypal, FaGooglePay } from "react-icons/fa"
+import { SiPaytm } from "react-icons/si"
 import Footer from "./Footer";
+import { useSelector } from "react-redux";
+import EmptyCart from "../Optional/EmptyCart";
+import CartItem from "../Optional/CartItem";
+import { Link } from "react-router-dom"
 const Cart = () => {
- 
-  return (
-    <Box w={["col", "col", "row"]} mb={8}>
-      <Box w={["95%", "95%", "95%"]} m="auto">
+  const cartItems = useSelector((state) => state.products);
+  let cartTotal = cartItems.reduce((acc, p) => {
+    return acc + Number(p.price);
+  }, 0);
+
+  return <>{
+    cartItems.length == 0 ? <EmptyCart /> : <Box w={["col", "col", "row"]} mb={8}>
+      <Box w={["95%", "95%", "80%"]} m="auto">
         <Flex direction={["column", "column", "row"]} mt={8}>
           <Heading as="h4" fontFamily={"sans-serif"} fontWeight="normal">
             Your Cart
@@ -56,89 +64,20 @@ const Cart = () => {
           <Text alignItems="center" display="flex" gap="10px" py={2} ml={4}>
             <CheckCircleIcon />
             You have qualified for: {""}Select a gift for you or someone you
-            love when you spend $130 or{""} more Don't forget to make your
+            love when you spend $12 or{""} more Don't forget to make your
             selection below
           </Text>
         </Box>
 
-        <Flex direction={["column", "column", "column", "column", "row"]}>
-          <Box>
-            <TableContainer mt={8}>
-              <Table size="md">
-                <Thead alignItems="center">
-                  <Tr>
-                    <Th>Items</Th>
-                    <Th>Price</Th>
-                    <Th>Quantity</Th>
-                    <Th>Subtotal</Th>
-                    <Th></Th>
-                  </Tr>
-                </Thead>
-                <Tbody>
-                  <Tr>
-                    <Td>
-                      <Flex
-                        alignItems="center"
-                        gap="10px"
-                        direction={[
-                          "column",
-                          "column",
-                          "column",
-                          "column",
-                          "row",
-                        ]}
-                      >
-                        <Image
-                          height={"70px"}
-                          width="70px"
-                          src="https://static.thcdn.com/images/large/webp//productimg/1600/1600/11396212-1194870995675144.jpg"
-                          alt="product"
-                        />
-                        <Text fontSize={["13px", "14px", "16px"]}>
-                          SkinMedica LYTERA 2.0 Pigment Correcting Serum
-                        </Text>
-                      </Flex>
-                    </Td>
-                    <Td>$128</Td>
-                    <Td>
-                      <Flex alignItems={"center"} gap="10px">
-                        <Button>-</Button>
-                        <Text>1</Text>
-                        <Button>+</Button>
-                      </Flex>
-                    </Td>
-                    <Td>
-                      <Text fontWeight="bold">$128</Text>
-                    </Td>
-                    <Td>
-                      <Box
-                        bgColor="#f1f1f1"
-                        display="flex"
-                        justifyContent="center"
-                        alignItem="center"
-                        p ={["1","1","2"]}
-                        borderRadius="50%"
-                      >
-                        <SmallCloseIcon
-                          boxSize="1em"
-                          display="flex"
-                          justifyContent="center"
-                          alignItem="center"
-                        />
-                      </Box>
-                    </Td>
-                  </Tr>
-                </Tbody>
-                <Tfoot>
-                  <Tr>
-                    <Th></Th>
-                    <Th></Th>
-                    <Th>Cart Subtotal:</Th>
-                    <Th fontWeight={"bold"}>$232</Th>
-                  </Tr>
-                </Tfoot>
-              </Table>
-            </TableContainer>
+        <Flex justify="space-between" direction={["column", "column", "column", "column", "row"]}>
+          <Box w={["100%", "100%", "55%"]} >
+            <Flex justify="space-between" border="1px solid gainsboro" mt="30px" p="15px" >
+              <Text fontSize="15px">{`${cartItems.length} items in your cart `}</Text>
+              <Text fontSize="15px">{`Cart Total: $${cartTotal}`}</Text>
+            </Flex>
+            <Box>
+              {cartItems.map((c) => <CartItem {...c} />)}
+            </Box>
 
             <Box mt="8">
               <Input
@@ -175,27 +114,29 @@ const Cart = () => {
                   CONTINUE SHOPPING
                 </Button>
                 <Spacer />
-                <Flex direction={["column","column","column"]} gap = "20px">
-                  <Button
-                    mt={["8", "8", "0"]}
-                    bgColor="blackAlpha.800"
-                    color="white"
-                    borderRadius="none"
-                    
-                    height="12"
-                    fontFamily={"sans-serif"}
-                    fontWeight="normal"
-                    colorScheme="blue"
-                  >
-                    <AiFillLock style={{ marginRight: "10px" }} /> CHECKOUT
-                    SECURILY NOW
-                  </Button>
-                  <Flex gap={"20px"} gap = "20px" alignItems = "center" w={["70%","50%","100%"]} margin = "auto">
-                        <FaCcPaypal size={"2.5em"} />
-                        <FaGooglePay size={"2.5em"}/>
-                        <SiPaytm size={"2.5em"}/>
-                        <FaCcAmazonPay size={"2.5em"}/>
-                        <FaCcApplePay size={"2.5em"}/>
+                <Flex direction={["column", "column", "column"]} gap="20px">
+                  <Link to="/checkout">
+                    <Button
+                      mt={["8", "8", "0"]}
+                      bgColor="blackAlpha.800"
+                      color="white"
+                      borderRadius="none"
+
+                      height="12"
+                      fontFamily={"sans-serif"}
+                      fontWeight="normal"
+                      colorScheme="blue"
+                    >
+                      <AiFillLock style={{ marginRight: "10px" }} /> CHECKOUT
+                      SECURILY NOW
+                    </Button>
+                  </Link>
+                  <Flex gap={"20px"} alignItems="center" w={["70%", "50%", "100%"]} margin="auto">
+                    <FaCcPaypal size={"2.5em"} />
+                    <FaGooglePay size={"2.5em"} />
+                    <SiPaytm size={"2.5em"} />
+                    <FaCcAmazonPay size={"2.5em"} />
+                    <FaCcApplePay size={"2.5em"} />
 
                   </Flex>
                 </Flex>
@@ -207,8 +148,9 @@ const Cart = () => {
 
           <Accordion
             allowToggle
-            w={["100%", "100%", "100%", "100%", "30%"]}
+            w={["100%", "100%", "100%", "100%", "40%"]}
             mt={8}
+            defaultIndex={[0]}
           >
             <AccordionItem bgColor={"#f1f1f1"}>
               <h2>
@@ -291,9 +233,11 @@ const Cart = () => {
           </Accordion>
         </Flex>
       </Box>
-      <Footer/>
+      <Footer />
     </Box>
-  );
+  }
+  </>
+
 };
 
 export default Cart;

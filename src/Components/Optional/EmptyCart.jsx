@@ -7,6 +7,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React from "react";
+import { Link } from "react-router-dom";
 import Footer from "../Pages/Footer";
 
 const EmptyCart = () => {
@@ -28,19 +29,22 @@ const EmptyCart = () => {
           <Heading as="h5" fontFamily={"sans-serif"} fontWeight="normal" mt={8}>
             There are currently no items in your cart.
           </Heading>
-          <Button
-            mt="6"
-            color={"white"}
-            fontWeight="normal"
-            bgColor="black"
-            borderRadius="none"
-          >
-            CONTINUE SHOPPING
-          </Button>
+          <Link to="/skin">
+            <Button
+              mt="6"
+              color={"white"}
+              fontWeight="normal"
+              bgColor="black"
+              borderRadius="none"
+
+            >
+              CONTINUE SHOPPING
+            </Button>
+          </Link>
         </Box>
 
         <SimpleGrid
-          columns={[1, 2, 2,3]}
+          columns={[1, 2, 2, 3]}
           spacing="40px"
           mt={12}
           textAlign={"left"}
@@ -90,7 +94,7 @@ const EmptyCart = () => {
           </Box>
         </SimpleGrid>
       </Box>
-      <Footer/>
+      <Footer />
     </Box>
   );
 };
