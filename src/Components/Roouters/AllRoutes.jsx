@@ -18,7 +18,7 @@ import SelfCare from '../Pages/All_Products_Pages/Self-Care';
 import SkinCare from '../Pages/All_Products_Pages/SkinCare';
 import SkinPage from '../Pages/All_Products_Pages/SkinPage';
 import Tools from '../Pages/All_Products_Pages/Tools';
-
+import Cart from "../Pages/Cart";
 import Home from '../Pages/Home';
 
 const AllRoutes = () => {
@@ -27,6 +27,7 @@ const AllRoutes = () => {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/login' element={<Login/>}/>
+        <Route path='/cart' element={<Cart/>}/>
         <Route path='/signup' element={<Signup/>}/>
         <Route path='/skin' element={<SkinCare/>}/>
         <Route path='/bathbeauty' element={<BathBeauty/>}/>

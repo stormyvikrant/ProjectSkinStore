@@ -94,29 +94,34 @@ const Navbar = () => {
 
         <div style={{ display: "flex", gap: "50px" }}>
           <div id="dropdown-account">
-            <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+            <div >
+              <Link to="/login" style={{ display: "flex", alignItems: "center", gap: "10px" }}>
               <VscAccount size="1.6em" />
               <Text>Account</Text>
+              </Link>
             </div>
             <div id="dropdown-account-content">
+              <Link to="/login"><Button
+              colorScheme="none"
+              w="full"
+              bgColor="black"
+              borderRadius={0}
+            >
+              LOGIN
+            </Button></Link>
+              <Link to="/signup">
               <Button
-                colorScheme="none"
-                w="full"
-                bgColor="black"
-                borderRadius={0}
-              >
-                LOGIN
-              </Button>
-              <Button
-                colorScheme="none"
-                mt={4}
-                borderRadius={0}
-                color="black"
-                w="full"
-                variant="outline"
-              >
-                REGISTER
-              </Button>
+              colorScheme="none"
+              mt={4}
+              borderRadius={0}
+              color="black"
+              w="full"
+              variant="outline"
+            >
+              REGISTER
+            </Button>
+              </Link>
+              
               <div
                 style={{
                   textAlign: "left",
@@ -135,14 +140,14 @@ const Navbar = () => {
           </div>
 
           <div class="dropdown">
-            <div style={{ display: "flex", alignItems: "center", gap: "24px" }}>
-              <div id="cart-icon">
-                <FaShoppingCart size="1.6em" />
-                <p className="cartValue">0</p>
-              </div>
-
-              <Text>Cart</Text>
+            <Link to="/cart"><div style={{ display: "flex", alignItems: "center", gap: "24px" }}>
+            <div id="cart-icon">
+              <FaShoppingCart size="1.6em" />
+              <p className="cartValue">0</p>
             </div>
+
+            <Text>Cart</Text>
+          </div></Link>
             <div class="dropdown-content">
               <p>There are currently no items in your cart.</p>
             </div>
@@ -772,23 +777,25 @@ const Navbar = () => {
               <DrawerContent>
                 <DrawerCloseButton />
                 <DrawerHeader mt={12}>
-                  <Button bgColor="black" color="white" colorScheme = "none">Login</Button>
-                  <Button variant="outline"  border =" 1px solid black" ml={4} colorScheme = "none">Register</Button>
+                  <Link to="/login" onClick={onClose}>
+                    <Button bgColor="black" color="white" colorScheme = "none">Login</Button>
+                  </Link>
+                  <Link to="/signup" onClick={onClose}>
+                    <Button variant="outline"  border =" 1px solid black" ml={4} colorScheme = "none">Register</Button>
+                  </Link>
                 </DrawerHeader>
 
                 <DrawerBody>
                   <Box display="flex" flexDirection = "column" gap = "20px">
-                    <p>Brands</p>
-                    <p>Holiday Gif</p>
-                    <p>Sale</p>
-                    <p>Skin Care</p>
-                    <p>Hair Care</p>
-                    <p>Makeup</p>
-                    <p>Bath & Body</p>
-                    <p>Self Care</p>
-                    <p>New & Trending</p>
-                    <p>Build a Routine</p>
-                    <p>Blog</p>
+                    <Link to="/brands" onClick={onClose}>Brands</Link>
+                    <Link to="/holiday" onClick={onClose}>Holiday Gif</Link>
+                    <Link to="/sale" onClick={onClose}>Sale</Link>
+                    <Link to="/skincare" onClick={onClose}>Skin Care</Link>
+                    <Link to="/hair" onClick={onClose}>Hair Care</Link>
+                    <Link to="/makeup" onClick={onClose}>Makeup</Link>
+                    <Link to="/bathbeauty" onClick={onClose}>Bath & Body</Link>
+                    <Link to="/selfcare" onClick={onClose}>Self Care</Link>
+                    <Link to="/blog" onClick={onClose}>Blog</Link>
                   </Box>
                 </DrawerBody>
 
@@ -800,16 +807,23 @@ const Navbar = () => {
         </div>
 
         <div>
-            <img style= {{width : "90px", height : "25px"}} src="https://seeklogo.com/images/S/skinstore-logo-5281C41BD3-seeklogo.com.png" alt="logo"/>
+            <Link to="/">
+              <img style= {{width : "90px", height : "25px"}} src="https://seeklogo.com/images/S/skinstore-logo-5281C41BD3-seeklogo.com.png" alt="logo"/>
+            </Link>
         </div>
 
         <div style={{display : "flex", gap : "30px", alignItems: "center"}}>
-            <VscAccount size="1.6em"/>
+            <Link to="/login">
+              <VscAccount size="1.6em"/>
+            </Link>
             <div class="dropdown" style={{paddingRight : "50px"}}>
             <div style={{ display: "flex", alignItems: "center", gap: "24px" }}>
               <div id="cart-icon">
-                <FaShoppingCart size="1.6em" />
-                <p className="cartValue">0</p>
+                    <Link to="/cart">
+                      <FaShoppingCart size="1.6em" />
+                      <p className="cartValue">0</p>
+                    </Link>
+                
               </div>
             </div>
             </div>

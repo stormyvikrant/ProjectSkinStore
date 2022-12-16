@@ -7,6 +7,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React from "react";
+import Footer from "../Pages/Footer";
 
 const EmptyCart = () => {
   return (
@@ -89,6 +90,7 @@ const EmptyCart = () => {
           </Box>
         </SimpleGrid>
       </Box>
+      <Footer/>
     </Box>
   );
 };
