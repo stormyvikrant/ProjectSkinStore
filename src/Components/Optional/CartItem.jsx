@@ -1,5 +1,5 @@
 import { SmallCloseIcon } from '@chakra-ui/icons'
-import { Flex, Td, Tr, Image, Text, Box, Button, Circle, Heading } from '@chakra-ui/react'
+import { Flex, Image, Text, Box, Circle, Heading } from '@chakra-ui/react'
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { deleteToCart } from '../Redux/cart/cart.actions'

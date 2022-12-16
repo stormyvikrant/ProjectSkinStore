@@ -1,8 +1,6 @@
 import {
   Box, Image, Flex, Heading, Select, Input
-  , Card,
-  Stack,
-  CardBody,
+  ,
   Text,
 
   Center,
