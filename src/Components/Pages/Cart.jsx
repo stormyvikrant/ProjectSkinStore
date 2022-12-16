@@ -27,6 +27,7 @@ import { CheckCircleIcon, InfoIcon, SmallCloseIcon } from "@chakra-ui/icons";
 import { BsGiftFill } from "react-icons/bs";
 import {FaCcAmazonPay, FaCcApplePay, FaCcPaypal, FaGooglePay} from "react-icons/fa"
 import {SiPaytm} from "react-icons/si"
+import Footer from "./Footer";
 const Cart = () => {
  
   return (
@@ -290,6 +291,7 @@ const Cart = () => {
           </Accordion>
         </Flex>
       </Box>
+      <Footer/>
     </Box>
   );
 };
