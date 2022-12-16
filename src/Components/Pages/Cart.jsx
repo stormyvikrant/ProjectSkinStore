@@ -6,14 +6,7 @@ import {
   Text,
   Heading,
   Spacer,
-  TableContainer,
-  Table,
-  Thead,
-  Tr,
-  Th,
-  Tbody,
-  Tfoot,
-  Td,
+
   Image,
   Accordion,
   AccordionItem,
@@ -46,18 +39,20 @@ const Cart = () => {
             Your Cart
           </Heading>
           <Spacer />
-          <Button
-            mt={["8", "8", "0"]}
-            bgColor="blackAlpha.800"
-            color="white"
-            colorScheme="none"
-            borderRadius="none"
-            height="12"
-            fontFamily={"sans-serif"}
-            fontWeight="normal"
-          >
-            <AiFillLock style={{ marginRight: "10px" }} /> CHECKOUT SECURILY NOW
-          </Button>
+          <Link to="/checkout">
+            <Button
+              mt={["8", "8", "0"]}
+              bgColor="blackAlpha.800"
+              color="white"
+              colorScheme="none"
+              borderRadius="none"
+              height="12"
+              fontFamily={"sans-serif"}
+              fontWeight="normal"
+            >
+              <AiFillLock style={{ marginRight: "10px" }} /> CHECKOUT SECURILY NOW
+            </Button>
+          </Link>
         </Flex>
 
         <Box border="1px solid #c8dec8" mt={8} color="green" bgColor="#E6F2E6">
@@ -101,18 +96,20 @@ const Cart = () => {
 
             <Box mt={8}>
               <Flex direction={["column", "column", "row"]}>
-                <Button
-                  mt={["8", "8", "0"]}
-                  bgColor="#f1f1f1"
-                  color="black"
-                  borderRadius="none"
-                  height="12"
-                  fontFamily={"sans-serif"}
-                  fontWeight="normal"
-                  colorScheme="blue"
-                >
-                  CONTINUE SHOPPING
-                </Button>
+                <Link to="/skin">
+                  <Button
+                    mt={["8", "8", "0"]}
+                    bgColor="#f1f1f1"
+                    color="black"
+                    borderRadius="none"
+                    height="12"
+                    fontFamily={"sans-serif"}
+                    fontWeight="normal"
+                    colorScheme="blue"
+                  >
+                    CONTINUE SHOPPING
+                  </Button>
+                </Link>
                 <Spacer />
                 <Flex direction={["column", "column", "column"]} gap="20px">
                   <Link to="/checkout">
