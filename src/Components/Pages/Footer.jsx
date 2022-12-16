@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Heading,  Text, Image } from '@chakra-ui/react';
+import { Box, Button, Flex, Heading, Text, Image } from '@chakra-ui/react';
 import { IoMdCall } from 'react-icons/io';
 import { FaTruckMoving } from "react-icons/fa"
 import { BsArrowClockwise } from "react-icons/bs"
@@ -26,12 +26,12 @@ const Footer = () => {
 
     <Box mt="100px" borderTop="1px solid black">
       <Box w="90%" m="auto">
-        <Flex direction={["column", "row"]} mt="25px" textAlign="left">
-          <Box w={["100%", "50%"]} pb="25px">
+        <Flex direction={["column", "column", "row"]} mt="25px" textAlign="left">
+          <Box w={["100%", "100%", "50%"]} pb="25px">
             <Heading mb="20px" fontSize="md">Sign up to our email list and receive 20% off your next order</Heading>
             <Button border="0px" bgColor="black" borderRadius="0px" _hover={{ bgColor: "#28bdb7", color: "white" }} color="white">SIGN UP</Button>
           </Box>
-          <Box w={["100%", "50%"]} pb="25px">
+          <Box w={["100%", "100%", "50%"]} pb="25px">
             <Heading fontSize="md" mb="20px" >Connect with us</Heading>
             <Flex>
               {socialLinks.map((s) => <Image mr="10px" as="img" w="35px" src={s} />)}
@@ -40,16 +40,16 @@ const Footer = () => {
         </Flex>
 
 
-        <Flex justify="space-between" direction={["column", "row"]}>
-          <Box textAlign="left" w={["100%", "48%"]} borderTop="1px solid black" pt="15px">
+        <Flex justify="space-between" direction={["column", "column", "row"]}>
+          <Box textAlign="left" w={["100%", "100%", "48%"]} borderTop="1px solid black" pt="15px">
             <Heading size="sm" mb="25px">Help & Information</Heading>
-            <Button border={["1px solid gainsboro", "0px"]} textAlign="left" fontSize="13px" display="block" w={["100%", "50%"]} mb="10px" borderRadius="0px" bgColor="white" _hover={{ bgColor: "gainsboro" }} leftIcon={<IoMdCall />}>Customer Service</Button>
-            <Button border={["1px solid gainsboro", "0px"]} textAlign="left" fontSize="13px" display="block" w={["100%", "50%"]} mb="10px" borderRadius="0px" bgColor="white" _hover={{ bgColor: "gainsboro" }} leftIcon={<FaTruckMoving />}>Delivery Information</Button>
-            <Button border={["1px solid gainsboro", "0px"]} textAlign="left" fontSize="13px" display="block" w={["100%", "50%"]} mb="10px" borderRadius="0px" bgColor="white" _hover={{ bgColor: "gainsboro" }} leftIcon={<BsArrowClockwise />}>Returns & Refunds</Button>
-            <Button border={["1px solid gainsboro", "0px"]} textAlign="left" fontSize="13px" display="block" w={["100%", "50%"]} mb="10px" borderRadius="0px" bgColor="white" _hover={{ bgColor: "gainsboro" }} leftIcon={<FaQuestion />}>Help Center</Button>
-            <Button border={["1px solid gainsboro", "0px"]} textAlign="left" fontSize="13px" display="block" w={["100%", "50%"]} mb="10px" borderRadius="0px" bgColor="white" _hover={{ bgColor: "gainsboro" }} leftIcon={<CgTrack />}>Track my order</Button>
+            <Button border={["1px solid gainsboro", "0px"]} textAlign="left" fontSize="13px" display="block" w={["100%", "100%", "50%"]} mb="10px" borderRadius="0px" bgColor="white" _hover={{ bgColor: "gainsboro" }} leftIcon={<IoMdCall />}>Customer Service</Button>
+            <Button border={["1px solid gainsboro", "0px"]} textAlign="left" fontSize="13px" display="block" w={["100%", "100%", "50%"]} mb="10px" borderRadius="0px" bgColor="white" _hover={{ bgColor: "gainsboro" }} leftIcon={<FaTruckMoving />}>Delivery Information</Button>
+            <Button border={["1px solid gainsboro", "0px"]} textAlign="left" fontSize="13px" display="block" w={["100%", "100%", "50%"]} mb="10px" borderRadius="0px" bgColor="white" _hover={{ bgColor: "gainsboro" }} leftIcon={<BsArrowClockwise />}>Returns & Refunds</Button>
+            <Button border={["1px solid gainsboro", "0px"]} textAlign="left" fontSize="13px" display="block" w={["100%", "100%", "50%"]} mb="10px" borderRadius="0px" bgColor="white" _hover={{ bgColor: "gainsboro" }} leftIcon={<FaQuestion />}>Help Center</Button>
+            <Button border={["1px solid gainsboro", "0px"]} textAlign="left" fontSize="13px" display="block" w={["100%", "100%", "50%"]} mb="10px" borderRadius="0px" bgColor="white" _hover={{ bgColor: "gainsboro" }} leftIcon={<CgTrack />}>Track my order</Button>
           </Box>
-          <Flex display={["block", "none"]}>
+          <Flex display={["block", "block", "none"]}>
             <Accordion allowToggle>
               <AccordionItem>
                 <h2>
@@ -98,14 +98,14 @@ const Footer = () => {
             </Accordion>
 
           </Flex>
-          <Flex display={["none", "flex"]} justify="space-between" textAlign="left" w={["100%", "48%"]}>
+          <Flex display={["none", "none", "flex"]} justify="space-between" textAlign="left" w={["100%", "48%"]}>
             <Box w="30%" borderTop="1px solid black">
               <Heading size="sm" ml="14px" mt="15px" mb="25px">About SkinStore</Heading>
-              {about.map((a) => <Button fontSize="13px" textAlign="left" display="block" w="100%" mb="10px" borderRadius="0px" bgColor="white" _hover={{ bgColor: "gainsboro" }} >{a}</Button>)}
+              {about.map((a) => <Button key={a} fontSize="13px" textAlign="left" display="block" w="100%" mb="10px" borderRadius="0px" bgColor="white" _hover={{ bgColor: "gainsboro" }} >{a}</Button>)}
             </Box>
             <Box w="30%" borderTop="1px solid black">
               <Heading size="sm" ml="14px" mt="15px" mb="25px">Legal</Heading>
-              {legal.map((l) => <Button fontSize="13px" textAlign="left" display="block" w="100%" mb="10px" borderRadius="0px" bgColor="white" _hover={{ bgColor: "gainsboro" }} >{l}</Button>)}
+              {legal.map((l) => <Button key={l} fontSize="13px" textAlign="left" display="block" w="100%" mb="10px" borderRadius="0px" bgColor="white" _hover={{ bgColor: "gainsboro" }} >{l}</Button>)}
             </Box>
             <Box w="30%" borderTop="1px solid black">
               <Heading size="sm" ml="14px" mt="15px" mb="25px">How To Contact Us</Heading>
@@ -117,14 +117,14 @@ const Footer = () => {
         </Flex>
       </Box>
       <Box borderTop="1px solid black" p="40px" mt="30px">
-        <Flex textAlign="left" w={["95%", "90%"]} m="auto" direction={["column-reverse", "row"]} >
-          <Box w={["100%", "50%"]}>
+        <Flex textAlign="left" w={["95%", "95%", "90%"]} m="auto" direction={["column-reverse", "column-reverse", "row"]} >
+          <Box w={["100%", "100%", "50%"]}>
             <Heading size="lg">THG</Heading>
             <Text>2022 © The Hut.com Ltd.</Text>
           </Box>
-          <Box w={["100%", "50%"]}>
+          <Box w={["100%", "100%", "50%"]}>
             <Heading size="sm" mb="25px" >Pay securely with</Heading>
-            <Image w={["100%", "50%"]} src="https://content.asos-media.com/-/media/customer-care/images/imported/us/uspaymentmethodsklarna.ash?la=en-us&h=418&w=1385&hash=A8DC189DE960960509E521CB0405352C" />
+            <Image w={["100%", "100%", "50%"]} src="https://content.asos-media.com/-/media/customer-care/images/imported/us/uspaymentmethodsklarna.ash?la=en-us&h=418&w=1385&hash=A8DC189DE960960509E521CB0405352C" />
           </Box>
         </Flex>
       </Box>
