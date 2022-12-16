@@ -556,7 +556,36 @@ const Navbar = () => {
                 </Box>
               </div>
             </div>
-
+          <div id="menu-dropdown">
+           <Link to='/haircare'><div id="menu-title">Hair</div></Link> 
+            <div className="menu-dropdown-content">
+              <Box display="flex" gap="50px" pt={5} padding="20px">
+                <div style={{ fontFamily: "sans-serif", paddingLeft: "20px" }}>
+                  <p
+                    style={{
+                      paddingTop: "15px",
+                      textAlign: "left",
+                      borderTop: "1px solid gray",
+                      fontWeight: "bold",
+                      marginBottom: "20px",
+                    }}
+                  >
+                    Populer Categories
+                  </p>
+                  <div
+                    style={{
+                      textAlign: "left",
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "10px",
+                    }}
+                  >
+                   <Link to='/hair'><p>View All Hair Care</p></Link>
+                   <Link to='/hair'><p>New In</p></Link>
+                   <Link to='/hair'><p>Clean Hair Care</p></Link>
+                   <Link to='/hair'><p>5 Rated Products</p></Link>
+                   <Link to='/hair'><p>Gift and Sets</p></Link>
+                   <Link to='/hair'><p>Travel Sizes</p></Link>
             <div id="menu-dropdown">
               <Link to='/hair'><div id="menu-title">Hair</div></Link>
               <div className="menu-dropdown-content">
@@ -588,6 +617,7 @@ const Navbar = () => {
                       <Link to='/hair'><p>Gift and Sets</p></Link>
                       <Link to='/hair'><p>Travel Sizes</p></Link>
                     </div>
+
                   </div>
                   <div style={{ fontFamily: "sans-serif", paddingLeft: "20px" }}>
                     <p
