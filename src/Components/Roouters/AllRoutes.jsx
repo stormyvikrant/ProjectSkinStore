@@ -19,13 +19,15 @@ import SelfCare from '../Pages/All_Products_Pages/Self-Care';
 import SkinCare from '../Pages/All_Products_Pages/SkinCare';
 import SkinPage from '../Pages/All_Products_Pages/SkinPage';
 import Tools from '../Pages/All_Products_Pages/Tools';
-
+import Cart from "../Pages/Cart";
 import Home from '../Pages/Home';
+import Shop from '../ProductsPage/ProductPage';
 
 const AllRoutes = () => {
   return (
     <div>
       <Routes>
+
         <Route path='/' element={<Home/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/signup' element={<Signup/>}/>
@@ -45,6 +47,27 @@ const AllRoutes = () => {
         <Route path='checkout' element={<Checkout/>}/>
         <Route path='/skincare' element={<SkinPage/>}/>
         <Route path='/haircare' element={<HairPage/>}/>
+
+        <Route path='/' element={<Home />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/cart' element={<Cart />} />
+        <Route path='/signup' element={<Signup />} />
+        <Route path='/skin' element={<Shop />} />
+        <Route path='/bathbeauty' element={<BathBeauty />} />
+        <Route path='/blog' element={<Blog />} />
+        <Route path='/brands' element={<Brands />} />
+        <Route path='/building' element={<BuildingRoute />} />
+        <Route path='/fragrence' element={<Fragrence />} />
+        <Route path='/hair' element={<Hair />} />
+        <Route path='/holiday' element={<Holiday />} />
+        <Route path='/makeup' element={<Makeup />} />
+        <Route path='/news' element={<NewsTrending />} />
+        <Route path='/sale' element={<Sale />} />
+        <Route path='/selfcare' element={<SelfCare />} />
+        <Route path='/tools' element={<Tools />} />
+        <Route path='/checkout' element={<Checkout />} />
+        <Route path='/skincare' element={<SkinPage />} />
+
       </Routes>
     </div>
   );
