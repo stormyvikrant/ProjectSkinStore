@@ -24,7 +24,7 @@ const SkinPage = () => {
 
       {/* **********************************************************   Trending Offers ************************************** */}
 
-  <Text fontSize={45}mt={4}>Trending Offers</Text>
+  <Text fontSize={45}mt={4} textAlign="center" mb={4}>Trending Offers</Text>
   <Box>
  <Center>
   <Flex direction={['column','column','row']}   w={"95%"} gap={4} m='auto' justifyContent={'space-between'}>
@@ -60,7 +60,7 @@ const SkinPage = () => {
 
      {/* **********************************************************    New and Trending: ISDIN ************************************** */}
 
-     <Text fontSize={35}mt={4}>New and Trending: ISDIN</Text>
+     <Text fontSize={35}mt={4}  textAlign="center" mb={4}>New and Trending: ISDIN</Text>
  <Box w='90%' margin={'auto'}>
 
     <Flex gap={12} direction={['column','column','row']}   w={"95%"}  m='auto' justifyContent={'space-between'} >
@@ -78,7 +78,7 @@ const SkinPage = () => {
 
 {/* **********************************************************Shop by Ingredient ************************************** */}
 
-<Text fontSize={45}>Shop by Ingredient</Text>
+<Text fontSize={45}  textAlign="center" mb={4}>Shop by Ingredient</Text>
 <Box mt={8} alignItems='center' w='85%' margin='auto'>
   
       <Box display={['grid','grid','flex']} justifyContent='space-between' gridTemplateColumns={'1fr 1fr'} >
@@ -106,7 +106,7 @@ const SkinPage = () => {
 
  {/* ********************************************************** Best Sellers ************************************** */}
 
- <Text fontSize={35}mt={4}>Best Sellers</Text>
+ <Text fontSize={35}mt={4}  textAlign="center" mb={4}>Best Sellers</Text>
   
   <Box  >
 <Center>
@@ -225,7 +225,7 @@ const SkinPage = () => {
 
     {/* **********************************************************   Over On The Blog... ************************************** */}
 
-    <Text fontSize={45}mt={4}>Over On The Blog...</Text>
+    <Text fontSize={45}mt={4}  textAlign="center" mb={4}>Over On The Blog...</Text>
   <Box>
  <Center>
   <Flex direction={['column','column','row']}   w={"95%"} gap={4} m='auto' justifyContent={'space-between'}>
@@ -236,7 +236,9 @@ const SkinPage = () => {
           </Center>
          <Heading fontSize={20} mt={4}>SkinCeuticals Gift</Heading>
           <Text fontSize={13} mt={2} color="gray">Receive a SkinCeuticals Resveratrol BE 4ml (Worth $21) when you spend $220 or more on the brand.</Text>
-      <Button bgColor={"white"} border='1px solid gray' borderRadius={'0'} mt={5}>SHOP-NOW</Button>
+          <Link to="/skin">
+          <Button bgColor={"white"} border='1px solid gray' borderRadius={'0'} mt={5}>SHOP-NOW</Button>
+          </Link>
       </Box>
       <Box w={['100%','100%','30%']}>
         <Center>
@@ -252,7 +254,9 @@ const SkinPage = () => {
         </Center>
          <Heading fontSize={20} mt={4}>25%off 111SKIN with code REPLAY+$95 Gift</Heading>
        <Text fontSize={13} mt={2} color="gray">Plus, receive a 111SKIN Space Defence Bright Eye Lift Gel Mini 7.5ml (Worth $95) when you spend $250 or more on the brand.</Text>
-         <Button bgColor={"white"} border='1px solid gray' borderRadius={'0'} mt={5}>SHOP-NOW</Button>
+       <Link to="/skin">
+       <Button bgColor={"white"} border='1px solid gray' borderRadius={'0'} mt={5}>SHOP-NOW</Button>
+       </Link>
       </Box>
     </Flex>
  </Center>

@@ -35,7 +35,7 @@ const Cart = () => {
     cartItems.length == 0 ? <EmptyCart /> : <Box w={["col", "col", "row"]} mb={8}>
       <Box w={["95%", "95%", "80%"]} m="auto">
         <Flex direction={["column", "column", "row"]} mt={8}>
-          <Heading as="h4" fontFamily={"sans-serif"} fontWeight="normal">
+          <Heading as="h4" fontFamily={"sans-serif"} fontWeight="normal" textAlign={["center","center","auto"]}>
             Your Cart
           </Heading>
           <Spacer />
@@ -49,6 +49,7 @@ const Cart = () => {
               height="12"
               fontFamily={"sans-serif"}
               fontWeight="normal"
+              w={["100%","100%","auto"]}
             >
               <AiFillLock style={{ marginRight: "10px" }} /> CHECKOUT SECURILY NOW
             </Button>
@@ -106,6 +107,7 @@ const Cart = () => {
                     fontFamily={"sans-serif"}
                     fontWeight="normal"
                     colorScheme="blue"
+                    w={["100%","100%","auto"]}
                   >
                     CONTINUE SHOPPING
                   </Button>
@@ -118,7 +120,7 @@ const Cart = () => {
                       bgColor="blackAlpha.800"
                       color="white"
                       borderRadius="none"
-
+                      w={["100%","100%","auto"]}
                       height="12"
                       fontFamily={"sans-serif"}
                       fontWeight="normal"

@@ -714,7 +714,7 @@ const Navbar = () => {
               <Link to='/fragrence'><div id="menu-title">Fragrence</div></Link>
             </div>
             <div>
-              <Link><div id="menu-title">Self Care</div></Link>
+              <Link to="/selfcare"><div id="menu-title">Self Care</div></Link>
             </div>
             <div>
               <Link to='/tools'><div id="menu-title">Tools</div></Link>
