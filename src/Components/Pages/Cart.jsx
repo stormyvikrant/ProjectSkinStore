@@ -26,7 +26,7 @@ import EmptyCart from "../Optional/EmptyCart";
 import CartItem from "../Optional/CartItem";
 import { Link } from "react-router-dom"
 const Cart = () => {
-  const cartItems = useSelector((state) => state.products);
+  const cartItems = useSelector((state) => state.cartManager.products);
   let cartTotal = cartItems.reduce((acc, p) => {
     return acc + Number(p.price);
   }, 0);

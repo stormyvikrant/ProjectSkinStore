@@ -1,3 +1,4 @@
+import { CheckCircleIcon } from "@chakra-ui/icons";
 import {
   Box,
   Image,
@@ -9,6 +10,7 @@ import {
   useDisclosure,
   Button,
   Text,
+  useToast,
 } from "@chakra-ui/react";
 import {
   Accordion,
@@ -108,7 +110,8 @@ const Shop = () => {
   let [category, setCategory] = useState("foundation");
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [modalProps, setModalProps] = useState({});
-  const cartProducts = useSelector((state) => state.products);
+  const toast = useToast();
+  const cartProducts = useSelector((state) => state.cartManager.products);
   let cartTotal = cartProducts.reduce((acc, p) => {
     return acc + Number(p.price);
   }, 0);
@@ -135,6 +138,24 @@ const Shop = () => {
     onOpen();
   };
   const handleAdd = (data) => {
+    toast({
+      position: "top-left",
+      duration: 1200,
+      render: () => (
+        <Flex
+          color="white"
+          border="4px solid white"
+          p={"10px"}
+          bgColor="green.400"
+        >
+          <CheckCircleIcon w={30} h={30} />
+          <Text
+            size="lg"
+            ml="15px"
+          >{`${modalProps.name} is now in your cart!!!`}</Text>
+        </Flex>
+      ),
+    });
     dispatch(addToCart(data));
     onClose();
   };

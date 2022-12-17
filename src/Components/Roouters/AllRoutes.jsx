@@ -1,7 +1,8 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Login from '../AuthPages/Login';
-import Signup from '../AuthPages/Signup';
+import Login from '../Auth/Login';
+import SignUp from '../Auth/SignUp';
+
 import BathBeauty from '../Pages/All_Products_Pages/Bath&Beauty';
 import Blog from '../Pages/All_Products_Pages/Blog';
 import Brands from '../Pages/All_Products_Pages/Brands';
@@ -20,15 +21,16 @@ import Tools from '../Pages/All_Products_Pages/Tools';
 import Cart from "../Pages/Cart";
 import Home from '../Pages/Home';
 import Shop from '../ProductsPage/ProductPage';
+import PrivateRoute from './PrivateRoute';
 
 const AllRoutes = () => {
   return (
     <div>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/login' element={<Login />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route path='/cart' element={<Cart />} />
-        <Route path='/signup' element={<Signup />} />
         <Route path='/skin' element={<Shop />} />
         <Route path='/bathbeauty' element={<BathBeauty />} />
         <Route path='/blog' element={<Blog />} />
@@ -42,7 +44,7 @@ const AllRoutes = () => {
         <Route path='/sale' element={<Sale />} />
         <Route path='/selfcare' element={<SelfCare />} />
         <Route path='/tools' element={<Tools />} />
-        <Route path='/checkout' element={<Checkout />} />
+        <Route path='/checkout' element={<PrivateRoute><Checkout /></PrivateRoute>} />
         <Route path='/skincare' element={<SkinPage />} />
       </Routes>
     </div>
