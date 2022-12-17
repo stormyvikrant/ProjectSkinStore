@@ -34,7 +34,9 @@ import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const cartItems = useSelector((state) => state.products)
+  const cartItems = useSelector((state) => state.cartManager.products);
+  const username = useSelector((state) => state.authManager.userdata.username);
+  const isAuth = useSelector((state) => state.authManager.isAuth)
   const btnRef = React.useRef();
   return (
     <div>
@@ -99,7 +101,7 @@ const Navbar = () => {
               <div >
                 <Link to="/login" style={{ display: "flex", alignItems: "center", gap: "10px" }}>
                   <VscAccount size="1.6em" />
-                  <Text>Account</Text>
+                  <Text>{isAuth ? username : "Account"}</Text>
                 </Link>
               </div>
               <div id="dropdown-account-content">

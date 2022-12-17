@@ -4,26 +4,45 @@ import {
   Text,
 
   Center,
-  Button
+  Button,
+  useDisclosure
 
 } from '@chakra-ui/react';
+
 import React from 'react';
-import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
 import Footer from '../Footer';
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+} from '@chakra-ui/react'
+import { CheckCircleIcon } from '@chakra-ui/icons';
+import { resetCart } from '../../Redux/cart/cart.actions';
 
 const Checkout = () => {
-  const cartItems = useSelector((state) => state.products);
+  const cartItems = useSelector((state) => state.cartManager.products);
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const dispatch = useDispatch()
   let cartTotal = cartItems.reduce((acc, p) => {
     return acc + Number(p.price);
   }, 0);
+  const handleProceed = () => {
+    dispatch(resetCart());
+    onOpen();
+
+
+  }
 
 
   return (
     <>
-
-
-
 
       <Flex margin="auto" direction={["column-reverse", "column-reverse", "row"]}>
         <Box w={["95%", "95%", "55%"]} >
@@ -143,15 +162,15 @@ const Checkout = () => {
 
         {/* ***********total item box*********** */}
 
-        <Box margin={"auto"} bgGradient='linear(red.100 0%, orange.100 25%, yellow.100 50%)' w={["95%", "95%", '40%']} h="300px" p="25px" border="1px solid #28bdb7" borderRadius="10px" mt={12} >
+        <Box margin={"auto"} w={["85%", "85%", '30%']} h="300px" p="30px" border="1px solid black" borderRadius="10px" mt={12} >
           <Heading align="center" mb="15px">Order Summary</Heading>
           <Flex mb="25px" justify="space-between">
             <Heading size="md">{`Total Items ${cartItems.length}`}</Heading>
             <Heading size="md">{`$${cartTotal}`}</Heading>
           </Flex>
           <Heading size="md" mb="25px">{` Taxes and duties : $18.5`}</Heading>
-          <Heading size="md" color="#28bdb7" mb="25px">{` Amount To Pay : $${cartTotal + 18.5}`}</Heading>
-          <Button m="auto" display="block" bgColor="black" _hover={{ bgColor: "#28bdb7", color: "black" }} color="white" borderRadius="0px" w={["95%", "95%", "50%"]} >{`Proceed To Pay $${cartTotal + 18.5}`}</Button>
+          <Heading size="md" color="#28bdb7" mb="25px">{` Amount To Pay : $${cartTotal == 0 ? 0 : cartTotal + 18.5}`}</Heading>
+          <Button m="auto" onClick={handleProceed} display="block" bgColor="black" _hover={{ bgColor: "#28bdb7", color: "black" }} color="white" borderRadius="0px" w={["95%", "95%", "50%"]} >{`Proceed To Pay $${cartTotal == 0 ? 0 : cartTotal + 18.5}`}</Button>
         </Box>
 
 
@@ -161,6 +180,25 @@ const Checkout = () => {
       </Flex>
 
       <Footer />
+      <Modal isCentered isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay
+          bg='none'
+          backdropFilter='auto'
+          backdropInvert='80%'
+          backdropBlur='2px'
+        />
+        <ModalContent>
+          <ModalHeader>Payment Done !!!</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <Image w="130px" m="auto" src="https://media.tenor.com/0AVbKGY_MxMAAAAM/check-mark-verified.gif" />
+            <Heading mt="20px" size="md">Your order will be delivered soon🤞</Heading>
+          </ModalBody>
+          <ModalFooter>
+            <Button onClick={onClose} bgColor="green.200" borderRadius="0px">Close</Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
     </>
   );
 }

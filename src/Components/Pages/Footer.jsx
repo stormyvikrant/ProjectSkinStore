@@ -11,6 +11,7 @@ import {
   AccordionPanel,
   AccordionIcon,
 } from '@chakra-ui/react'
+import { Link } from "react-router-dom"
 
 import React from 'react';
 const socialLinks = ["https://seeklogo.com/images/F/facebook-icon-circle-logo-09F32F61FF-seeklogo.com.png", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnNKRDhSi5b_UTin6DkL-H_kHILzCewAA_VQ&usqp=CAU", "https://www.pngkey.com/png/full/2-27646_twitter-logo-png-transparent-background-logo-twitter-png.png", "https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png", "https://toppng.com/uploads/preview/snapchat-logo-icon-png-snapchat-logo-circle-11562922134qgu9m89jgh.png"]
@@ -29,7 +30,7 @@ const Footer = () => {
         <Flex direction={["column", "column", "row"]} mt="25px" textAlign="left">
           <Box w={["100%", "100%", "50%"]} pb="25px">
             <Heading mb="20px" fontSize="md">Sign up to our email list and receive 20% off your next order</Heading>
-            <Button border="0px" bgColor="black" borderRadius="0px" _hover={{ bgColor: "#28bdb7", color: "white" }} color="white">SIGN UP</Button>
+            <Link to="/signup"><Button border="0px" bgColor="black" borderRadius="0px" _hover={{ bgColor: "#28bdb7", color: "white" }} color="white">SIGN UP</Button></Link>
           </Box>
           <Box w={["100%", "100%", "50%"]} pb="25px">
             <Heading fontSize="md" mb="20px" >Connect with us</Heading>
