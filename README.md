@@ -73,7 +73,7 @@ We using different kinds of the technologies to make this website. These things 
 
 - [x] Vikrant Prajapati - [GitHub Profile](https://github.com/stormyvikrant)
 - [x] Mukesh Kaushal - [GitHub Profile](https://github.com/imukeshkaushal) 
-- [x] Priyank Gupta - [GitHub Profile](https://github.com/sumit6675)
+- [x] Priyank Gupta - [GitHub Profile](https://github.com/priyankfz7)
 - [x] Biswadip Roy - [GitHub Profile](https://github.com/amREDOX)
 - [x] Satyaranjan Maity - [GitHub Profile](https://github.com/Satyaranjan8414)
 

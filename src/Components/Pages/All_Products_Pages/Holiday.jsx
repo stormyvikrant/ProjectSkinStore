@@ -28,17 +28,19 @@ const Holiday = () => {
 
 
       <Text fontSize={45} mt={"14px"} mb={"14px"} align="center">Holiday Offers</Text>
-      <Box mt={12}>
+      <Box mt={12} textAlign="center">
         <Center>
-          <Flex direction={['column', 'column', 'row']} w={"95%"} gap={4} m='auto' justifyContent={'space-between'}>
+          <Flex direction={['column', 'column', 'row']} w={"95%"} gap={4} m='auto' justifyContent={'space-between'} alignItems="center">
 
-            <Box w={['100%', '100%', '30%']}>
+            <Box w={['100%', '100%', '30%']} >
               <Center>
                 <Link to='/skin'><Image src="https://static.thcdn.com/images/small/webp/widgets/121-us/01/original-original-SkinStore_Q4_Photography_2022_-_October_-_THG0035163_-_BATCHING_shot21500x500-052147-021101.jpg" w={'100%'} alt="1" /> </Link>
               </Center>
               <Heading fontSize={20} mt={4}>SkinCeuticals Gift</Heading>
               <Text fontSize={13} mt={2} color="gray">Receive a SkinCeuticals Resveratrol BE 4ml (Worth $21) when you spend $220 or more on the brand.</Text>
-              <Button bgColor={"white"} border='1px solid gray' borderRadius={'0'} mt={5}>SHOP-NOW</Button>
+              <Link to="/skin">
+                <Button bgColor={"white"} border='1px solid gray' borderRadius={'0'} mt={5}>SHOP-NOW</Button>
+              </Link>
             </Box>
             <Box w={['100%', '100%', '30%']}>
               <Center>
@@ -46,7 +48,10 @@ const Holiday = () => {
               </Center>
               <Heading fontSize={20} mt={4}>20%off SkinMedica+$135 gift</Heading>
               <Text fontSize={13} mt={2} color="gray">Receive a FREE SkinMedica Eye Illuminating Kit (Worth $135) when you spend $250 or more on the brand.</Text>
+              <Link to="/skin">
+              
               <Button bgColor={"white"} border='1px solid gray' borderRadius={'0'} mt={5}>SHOP-NOW</Button>
+              </Link>
             </Box>
             <Box w={['100%', '100%', '30%']}>
               <Center>
@@ -54,7 +59,9 @@ const Holiday = () => {
               </Center>
               <Heading fontSize={20} mt={4}>25%off 111SKIN with code REPLAY+$95 Gift</Heading>
               <Text fontSize={13} mt={2} color="gray">Plus, receive a 111SKIN Space Defence Bright Eye Lift Gel Mini 7.5ml (Worth $95) when you spend $250 or more on the brand.</Text>
-              <Button bgColor={"white"} border='1px solid gray' borderRadius={'0'} mt={5}>SHOP-NOW</Button>
+              <Link>
+                <Button bgColor={"white"} border='1px solid gray' borderRadius={'0'} mt={5}>SHOP-NOW</Button>
+              </Link>
             </Box>
           </Flex>
         </Center>
@@ -62,7 +69,7 @@ const Holiday = () => {
 
       {/* ****************************************  Three  cirle image*************************** */}
 
-      <Box mt={12}>
+      <Box mt={12} textAlign="center">
         <Center>
           <Flex direction={['column', 'column', 'row']} w={"95%"} gap={4} m='auto' justifyContent={'space-between'}>
 
@@ -72,7 +79,10 @@ const Holiday = () => {
               </Center>
               <Heading fontSize={20} mt={4}>SkinCeuticals Gift</Heading>
               <Text fontSize={13} mt={2} color="gray">Receive a SkinCeuticals Resveratrol BE 4ml (Worth $21) when you spend $220 or more on the brand.</Text>
+              <Link to="/skin">
+              
               <Button bgColor={"white"} border='1px solid gray' borderRadius={'0'} mt={5}>SHOP-NOW</Button>
+              </Link>
             </Box>
             <Box w={['100%', '100%', '30%']}>
               <Center>
@@ -80,7 +90,9 @@ const Holiday = () => {
               </Center>
               <Heading fontSize={20} mt={4}>20%off SkinMedica+$135 gift</Heading>
               <Text fontSize={13} mt={2} color="gray">Receive a FREE SkinMedica Eye Illuminating Kit (Worth $135) when you spend $250 or more on the brand.</Text>
+              <Link to="/skin">
               <Button bgColor={"white"} border='1px solid gray' borderRadius={'0'} mt={5}>SHOP-NOW</Button>
+              </Link>
             </Box>
             <Box w={['100%', '100%', '30%']}>
               <Center>
@@ -88,7 +100,9 @@ const Holiday = () => {
               </Center>
               <Heading fontSize={20} mt={4}>25%off 111SKIN with code REPLAY+$95 Gift</Heading>
               <Text fontSize={13} mt={2} color="gray">Plus, receive a 111SKIN Space Defence Bright Eye Lift Gel Mini 7.5ml (Worth $95) when you spend $250 or more on the brand.</Text>
-              <Button bgColor={"white"} border='1px solid gray' borderRadius={'0'} mt={5}>SHOP-NOW</Button>
+              <Link to="/">
+                <Button bgColor={"white"} border='1px solid gray' borderRadius={'0'} mt={5}>SHOP-NOW</Button>
+              </Link>
             </Box>
           </Flex>
         </Center>
@@ -96,7 +110,7 @@ const Holiday = () => {
 
       {/* ****************************************  Three  cirle image*************************** */}
 
-      <Box mt={12}>
+      <Box mt={12} textAlign="center">
         <Center>
           <Flex direction={['column', 'column', 'row']} w={"95%"} gap={4} m='auto' justifyContent={'space-between'}>
 
@@ -106,7 +120,9 @@ const Holiday = () => {
               </Center>
               <Heading fontSize={20} mt={4}>SkinCeuticals Gift</Heading>
               <Text fontSize={13} mt={2} color="gray">Receive a SkinCeuticals Resveratrol BE 4ml (Worth $21) when you spend $220 or more on the brand.</Text>
+              <Link to="/">
               <Button bgColor={"white"} border='1px solid gray' borderRadius={'0'} mt={5}>SHOP-NOW</Button>
+              </Link>
             </Box>
             <Box w={['100%', '100%', '30%']}>
               <Center>
@@ -114,7 +130,9 @@ const Holiday = () => {
               </Center>
               <Heading fontSize={20} mt={4}>20%off SkinMedica+$135 gift</Heading>
               <Text fontSize={13} mt={2} color="gray">Receive a FREE SkinMedica Eye Illuminating Kit (Worth $135) when you spend $250 or more on the brand.</Text>
+              <Link to="/skin">
               <Button bgColor={"white"} border='1px solid gray' borderRadius={'0'} mt={5}>SHOP-NOW</Button>
+              </Link>
             </Box>
             <Box w={['100%', '100%', '30%']}>
               <Center>
@@ -122,7 +140,9 @@ const Holiday = () => {
               </Center>
               <Heading fontSize={20} mt={4}>25%off 111SKIN with code REPLAY+$95 Gift</Heading>
               <Text fontSize={13} mt={2} color="gray">Plus, receive a 111SKIN Space Defence Bright Eye Lift Gel Mini 7.5ml (Worth $95) when you spend $250 or more on the brand.</Text>
+              <Link to="/skin">
               <Button bgColor={"white"} border='1px solid gray' borderRadius={'0'} mt={5}>SHOP-NOW</Button>
+              </Link>
             </Box>
           </Flex>
         </Center>
