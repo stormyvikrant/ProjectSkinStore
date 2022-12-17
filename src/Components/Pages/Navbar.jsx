@@ -16,6 +16,7 @@ import {
   InputRightElement,
   Text,
   useDisclosure,
+  useToast,
 } from "@chakra-ui/react";
 import React from "react";
 import "../Pages/Navbar.css";
@@ -30,14 +31,51 @@ import { HiMenu } from "react-icons/hi"
 import { VscReferences } from "react-icons/vsc";
 import { CgSearch } from "react-icons/cg"
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
-
+import { useDispatch, useSelector } from "react-redux";
+import { CheckCircleIcon, WarningIcon } from '@chakra-ui/icons'
+import { userLogin, userLogout } from '../Redux/auth/auth.actions'
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const dispatch = useDispatch()
   const cartItems = useSelector((state) => state.cartManager.products);
   const username = useSelector((state) => state.authManager.userdata.username);
   const isAuth = useSelector((state) => state.authManager.isAuth)
   const btnRef = React.useRef();
+  const toast = useToast();
+
+  const handleLogOut = () => {
+    if (!isAuth) {
+        toast({
+            position: 'top-left',
+
+            duration: 1200,
+
+            render: () => (
+                <Flex color='white' border="4px solid white" p={"10px"} bgColor='red'>
+
+                    <WarningIcon w={30} h={30} /><Text size="lg" ml="15px">You have not Signed in yet!!!</Text>
+                </Flex >
+            ),
+        })
+
+    } else {
+
+        toast({
+            position: 'top-left',
+            duration: 1200,
+            render: () => (
+                <Flex color='white' border="4px solid white" p={"10px"} bgColor='green.400'>
+
+                    <CheckCircleIcon w={30} h={30} /><Text size="lg" ml="15px">You have not Signed Out Successfully!!!</Text>
+                </Flex >
+            ),
+        })
+        dispatch(userLogout())
+    }
+
+
+
+}
   return (
     <div>
       <Box
@@ -105,14 +143,23 @@ const Navbar = () => {
                 </Link>
               </div>
               <div id="dropdown-account-content">
-                <Link to="/login"><Button
+              {
+                isAuth?    <Button onClick={handleLogOut}
                   colorScheme="none"
                   w="full"
                   bgColor="black"
                   borderRadius={0}
                 >
-                  LOGIN
-                </Button></Link>
+                  LOGOUT
+                </Button>:<Link to="/login"><Button
+                colorScheme="none"
+                w="full"
+                bgColor="black"
+                borderRadius={0}
+              >
+                LOGIN
+              </Button></Link>
+              }
                 <Link to="/signup">
                   <Button
                     colorScheme="none"

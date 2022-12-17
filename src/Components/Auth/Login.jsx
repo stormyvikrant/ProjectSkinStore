@@ -45,7 +45,7 @@ const Login = () => {
                 ),
             })
             dispatch(userLogin());
-            navigate("/skin")
+            navigate("/")
 
 
         }
