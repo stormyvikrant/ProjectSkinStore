@@ -51,7 +51,7 @@ const Navbar = () => {
             duration: 1200,
 
             render: () => (
-                <Flex color='white' border="4px solid white" p={"10px"} bgColor='red'>
+                <Flex color='white' border="4px solid white" p={"10px"} bgColor='red' >
 
                     <WarningIcon w={30} h={30} /><Text size="lg" ml="15px">You have not Signed in yet!!!</Text>
                 </Flex >
@@ -78,7 +78,7 @@ const Navbar = () => {
 }
   return (
     <div>
-      <Box
+      <Box id="top-bar"
         style={{
           backgroundColor: "#F2F2F2",
           padding: "10px",
@@ -812,7 +812,7 @@ const Navbar = () => {
         </Box>
       </Box>
 
-      <div id="mobile_bar">
+      <div id="mobile_bar" style={{position : "fixed", backgroundColor : "white", width : "100%", top:"0", zIndex: "100", marginBottom: "300px", borderBottom: "1px solid gainsboro"}}>
         <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
           <div style={{ marginLeft: "30px" }}>
             <HiMenu ref={btnRef} colorScheme="teal" onClick={onOpen} size="1.6em" />
@@ -822,19 +822,26 @@ const Navbar = () => {
               onClose={onClose}
               finalFocusRef={btnRef}
               height="100vh"
-              size="full"
+              size="xs"
+              
             >
               <DrawerOverlay />
               <DrawerContent>
                 <DrawerCloseButton />
-                <DrawerHeader mt={12}>
-                  <Link to="/login" onClick={onClose}>
-                    <Button bgColor="black" color="white" colorScheme="none">Login</Button>
-                  </Link>
-                  <Link to="/signup" onClick={onClose}>
-                    <Button variant="outline" border=" 1px solid black" ml={4} colorScheme="none">Register</Button>
-                  </Link>
-                </DrawerHeader>
+                {
+                  isAuth? <DrawerHeader mt={12} onClick = {onClose} display="flex" gap={12}>
+                    <Text > {isAuth ? "Hii " + username : "Account"}</Text>
+                    <Button bgColor="black" color="white" colorScheme="none" onClick={handleLogOut}>Logout</Button>
+                 
+                </DrawerHeader> : <DrawerHeader mt={12}>
+                <Link to="/login" onClick={onClose}>
+                  <Button bgColor="black" color="white" colorScheme="none">Login</Button>
+                </Link>
+                <Link to="/signup" onClick={onClose}>
+                  <Button variant="outline" border=" 1px solid black" ml={4} colorScheme="none">Register</Button>
+                </Link>
+              </DrawerHeader>
+                }
 
                 <DrawerBody>
                   <Box display="flex" flexDirection="column" gap="20px">

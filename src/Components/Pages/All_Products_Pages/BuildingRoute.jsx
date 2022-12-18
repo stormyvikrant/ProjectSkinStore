@@ -180,7 +180,7 @@ const Build = () => {
 
   return (
     <>
-      <Flex w="90%" m="auto" justify="space-between">
+      <Flex w="90%" m="auto" justify="space-between" mt={["12","12","12","12","auto"]}>
         <Box
           w="25%"
           display={["none", "none", "block"]}

@@ -43,7 +43,7 @@ const SignUp = () => {
 
     }
     return (
-        <Box bgColor="#f5f5f5" pt="50px" pb="50px">
+        <Box bgColor="#f5f5f5" pt="50px" pb="50px" mt={["12","12","12","12","auto"]}>
 
             <Box w={["90%", "50", "40%"]} m="auto" p="25px" bgColor={"white"}>
                 <Heading size="lg" mb="30px">Existing Customers</Heading>

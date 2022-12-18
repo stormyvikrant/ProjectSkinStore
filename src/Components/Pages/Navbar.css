@@ -146,6 +146,9 @@
       padding-top: 15px;
       padding-bottom: 15px;
     }
+    #top-bar{
+      display: none;
+    }
   }
 
   @media only screen and (min-width: 1301px) {

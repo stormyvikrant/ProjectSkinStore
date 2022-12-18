@@ -44,7 +44,7 @@ const Checkout = () => {
   return (
     <>
 
-      <Flex margin="auto" direction={["column-reverse", "column-reverse", "row"]}>
+      <Flex margin="auto" direction={["column-reverse", "column-reverse", "row"]} mt={["12","12","12","12","auto"]}>
         <Box w={["95%", "95%", "55%"]} >
 
           <Center>
@@ -192,7 +192,8 @@ const Checkout = () => {
           <ModalCloseButton />
           <ModalBody>
             <Image w="130px" m="auto" src="https://media.tenor.com/0AVbKGY_MxMAAAAM/check-mark-verified.gif" />
-            <Heading mt="20px" size="md">Your order will be delivered soon🤞</Heading>
+            <Heading mt="20px" size="md">Your order is Successfully Placed.</Heading>
+            <Text>Thanks for Placing order. Your order should be placed under 4 to 5 Days. </Text>
           </ModalBody>
           <ModalFooter>
             <Button onClick={onClose} bgColor="green.200" borderRadius="0px">Close</Button>
