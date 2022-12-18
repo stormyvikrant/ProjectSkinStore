@@ -19,9 +19,9 @@ import {
 import React from "react";
 const HairPage = () => {
   return (
-    <div>
+    <div >
       {/* ******************************Big Image********************* */}
-      <Box w="90%" m="auto" border={"2px solid black"} mt="2" borderRadius={10}>
+      <Box w="90%" m="auto" border={"2px solid black"}  borderRadius={10} mt={["16","16","16","16","auto"]}>
         <Link to="/hair">
           <Image
             borderRadius={10}

@@ -16,7 +16,7 @@ const SkinPage = () => {
   return (
     <div>
     {/* ******************************Big Image********************* */}
-    <Box w='90%' m='auto' border={'2px solid black'} mt='2' borderRadius={10} >    
+    <Box w='90%' m='auto' border={'2px solid black'} mt='2' borderRadius={10}  >    
       <Link to='/skin'>
        <Image  borderRadius={10} src='https://static.thcdn.com/images/xlarge/webp/widgets/121-us/26/1180x450-073626.jpeg' alt='skin image'/> 
       </Link>        

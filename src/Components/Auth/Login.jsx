@@ -93,7 +93,7 @@ const Login = () => {
     }
     return (
         <>
-            <Box bgColor="#f5f5f5" pb="50px">
+            <Box bgColor="#f5f5f5" pb="50px" mt={["12","12","12","12","auto"]}>
                 <Flex w={["90%", "70%", "70%"]} m="auto" direction={["column", "column", "row"]} justify="space-between">
                     <Box w={["100%", "100%", "45%"]} mt="30px" p="25px" bgColor={"white"}>
                         <Heading size="lg" mb="30px">Existing Customers</Heading>

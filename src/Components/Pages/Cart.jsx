@@ -34,7 +34,7 @@ const Cart = () => {
   return <>{
     cartItems.length == 0 ? <EmptyCart /> : <Box w={["col", "col", "row"]} mb={8}>
       <Box w={["95%", "95%", "80%"]} m="auto">
-        <Flex direction={["column", "column", "row"]} mt={8}>
+        <Flex direction={["column", "column", "row"]} mt={["20","20","8"]}>
           <Heading as="h4" fontFamily={"sans-serif"} fontWeight="normal" textAlign={["center","center","auto"]}>
             Your Cart
           </Heading>
