@@ -21,10 +21,10 @@ const HairPage = () => {
   return (
     <div >
       {/* ******************************Big Image********************* */}
-      <Box w="90%" m="auto" border={"2px solid black"}  borderRadius={10} mt={["16","16","16","16","auto"]}>
+      <Box w="90%" m="auto" mt={["16", "16", "16", "16", "16px"]}>
         <Link to="/hair">
           <Image
-            borderRadius={10}
+
             src="https://static.thcdn.com/images/xlarge/webp/widgets/121-us/23/SS-Batching-Christmas-Category_Banner-EG1180x450_4-082423.jpg"
             alt="hair image"
           />
