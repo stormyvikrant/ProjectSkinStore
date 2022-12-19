@@ -1,4 +1,9 @@
-import { AUTH_LOGIN, AUTH_LOGOUT, AUTH_SIGN_UP } from "./auth.action.types";
+import {
+  AUTH_ADMIN_LOGIN,
+  AUTH_LOGIN,
+  AUTH_LOGOUT,
+  AUTH_SIGN_UP,
+} from "./auth.action.types";
 const int = {
   email: "",
   password: "",
@@ -7,6 +12,7 @@ const int = {
 const initialState = {
   isAuth: JSON.parse(localStorage.getItem("isAuth")) || false,
   userdata: JSON.parse(localStorage.getItem("userdata")) || int,
+  adminIsAuth: JSON.parse(localStorage.getItem("adminIsAuth")) || false,
 };
 export const authReducer = (state = initialState, { type, payload }) => {
   switch (type) {
@@ -21,6 +27,10 @@ export const authReducer = (state = initialState, { type, payload }) => {
     case AUTH_LOGOUT: {
       localStorage.setItem("isAuth", false);
       return { ...state, isAuth: false };
+    }
+    case AUTH_ADMIN_LOGIN: {
+      localStorage.setItem("adminIsAuth", true);
+      return { ...state, adminIsAuth: true };
     }
     default: {
       return state;

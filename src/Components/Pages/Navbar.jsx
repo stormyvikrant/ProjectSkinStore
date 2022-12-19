@@ -770,10 +770,10 @@ const Navbar = () => {
               <Link to='/news'><div id="menu-title">News & Trending</div></Link>
             </div>
             <div>
-              <Link to='/building'><div id="menu-title">Build a Routine</div></Link>
+              <Link to='/latest'><div id="menu-title">Latest</div></Link>
             </div>
             <div>
-              <Link to='/blog'><div id="menu-title">Blog</div></Link>
+              <Link to='/admin'><div id="menu-title">Admin</div></Link>
             </div>
           </Box>
         </Box>
@@ -852,8 +852,8 @@ const Navbar = () => {
                     <Link to="/hair" onClick={onClose}>Hair Care</Link>
                     <Link to="/makeup" onClick={onClose}>Makeup</Link>
                     <Link to="/bathbeauty" onClick={onClose}>Bath & Body</Link>
-                    <Link to="/selfcare" onClick={onClose}>Self Care</Link>
-                    <Link to="/blog" onClick={onClose}>Blog</Link>
+                    <Link to="/admin" onClick={onClose}>Admin</Link>
+                    <Link to="/latest" onClick={onClose}>Latest</Link>
                   </Box>
                 </DrawerBody>
 

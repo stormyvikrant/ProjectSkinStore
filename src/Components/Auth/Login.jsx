@@ -106,7 +106,9 @@ const Login = () => {
                                 <Input value={data.password} h="50px" border="1px solid black" onChange={handleChange} mb="30px" isRequired type='password' />
 
                             </FormControl>
-                            <Text color="black" as="u" >FORGOTTEN YOUR PASSWORD?</Text>
+                            <Link to="/admin-login">
+                                <Text as="u" color="red" >Do you have an admin account?</Text>
+                            </Link>
                             <Button w="100%" color="white" mt="20px" borderRadius="0px" bgColor="black" _hover={{ bgColor: "#28bdb7", color: "black" }} type="submit">SIGN-IN</Button>
 
                         </form>

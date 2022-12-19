@@ -27,5 +27,29 @@ const PrivateRoute = ({ children }) => {
     }
 
 }
+export const AdminPrivateRoute = ({ children }) => {
+    let adminIsAuth = useSelector((state) => state.authManager.adminIsAuth);
+
+    const toast = useToast()
+
+    if (adminIsAuth) {
+        return children
+    } else {
+        toast({
+            position: 'top-left',
+
+            render: () => (
+                <Flex color='white' border="4px solid white" p={"10px"} bgColor='red'>
+
+                    <WarningIcon w={30} h={30} /><Text size="lg" ml="15px">Sign In through Admin Account</Text>
+                </Flex >
+
+            ),
+        })
+        return <Navigate to="/admin-login" />
+    }
+
+}
+
 
 export default PrivateRoute

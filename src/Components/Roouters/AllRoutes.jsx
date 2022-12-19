@@ -1,5 +1,8 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+import Admin from '../Admin/Admin';
+import Latest from '../Admin/Latest';
+import AdminLogin from '../Auth/AdminLogin';
 import Login from '../Auth/Login';
 import SignUp from '../Auth/SignUp';
 
@@ -22,12 +25,14 @@ import Tools from '../Pages/All_Products_Pages/Tools';
 import Cart from "../Pages/Cart";
 import Home from '../Pages/Home';
 import Shop from '../ProductsPage/ProductPage';
-import PrivateRoute from './PrivateRoute';
+import PrivateRoute, { AdminPrivateRoute } from './PrivateRoute';
 
 const AllRoutes = () => {
   return (
     <div>
       <Routes>
+        <Route path="/admin-login" element={<AdminLogin />} />
+        <Route path="/admin" element={<AdminPrivateRoute><Admin /></AdminPrivateRoute>} />
         <Route path='/' element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
@@ -47,6 +52,7 @@ const AllRoutes = () => {
         <Route path='/tools' element={<Tools />} />
         <Route path='/checkout' element={<PrivateRoute><Checkout /></PrivateRoute>} />
         <Route path='/skincare' element={<SkinPage />} />
+        <Route path="/latest" element={<Latest />} />
       </Routes>
     </div>
   );

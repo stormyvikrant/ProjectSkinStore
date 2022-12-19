@@ -162,7 +162,7 @@ const Checkout = () => {
 
         {/* ***********total item box*********** */}
 
-        <Box margin={"auto"} w={["85%", "85%", '30%']} h="300px" p="30px" border="1px solid black" borderRadius="10px" mt={12} >
+        <Box margin={"auto"} w={["85%", "85%", '30%']} h="370px" p="30px" border="1px solid black" borderRadius="10px" mt={12} >
           <Heading align="center" mb="15px">Order Summary</Heading>
           <Flex mb="25px" justify="space-between">
             <Heading size="md">{`Total Items ${cartItems.length}`}</Heading>
@@ -170,7 +170,11 @@ const Checkout = () => {
           </Flex>
           <Heading size="md" mb="25px">{` Taxes and duties : $18.5`}</Heading>
           <Heading size="md" color="#28bdb7" mb="25px">{` Amount To Pay : $${cartTotal == 0 ? 0 : cartTotal + 18.5}`}</Heading>
-          <Button m="auto" onClick={handleProceed} display="block" bgColor="black" _hover={{ bgColor: "#28bdb7", color: "black" }} color="white" borderRadius="0px" w={["95%", "95%", "50%"]} >{`Proceed To Pay $${cartTotal == 0 ? 0 : cartTotal + 18.5}`}</Button>
+          <Button m="auto" onClick={handleProceed} display="block" bgColor="black" _hover={{ bgColor: "#28bdb7", color: "black" }} color="white" borderRadius="0px" w={["95%", "95%", "95%"]} >{`Proceed To Pay $${cartTotal == 0 ? 0 : cartTotal + 18.5}`}</Button>
+          <Link to="/skin">
+            <Button m="auto" onClick={handleProceed} display="block" bgColor="white" border="1px solid black" _hover={{ bgColor: "#28bdb7", color: "black" }} color="black" borderRadius="0px" w={["95%", "95%", "95%"]} mt="20px">Continue Shopping</Button>
+
+          </Link>
         </Box>
 
 

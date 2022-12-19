@@ -1,4 +1,6 @@
 import { CheckCircleIcon } from "@chakra-ui/icons";
+import { SkeletonCircle } from "@chakra-ui/react";
+
 import {
   Box,
   Image,
@@ -11,6 +13,7 @@ import {
   Button,
   Text,
   useToast,
+  Skeleton,
 } from "@chakra-ui/react";
 import {
   Accordion,
@@ -372,13 +375,44 @@ const Shop = () => {
             </Select>
           </Flex>
           {loading ? (
-            <Image
-              w="100px"
-              display="block"
-              m="auto"
-              mt="100px"
-              src="https://www.aguacaliente.org/imgs/loading.gif"
-            />
+            <SimpleGrid w="100%" columns={[2, 2, 3]} spacing="40px" pt="10">
+              {Array(10)
+                .fill("")
+                .map((e) => (
+                  <Box padding="6" h="470px " boxShadow="md" bg="white">
+                    <Skeleton
+                      h="200px"
+                      startColor="pink.100"
+                      mb="25px"
+                      endColor="orange.100"
+                      size="10"
+                    />
+                    <Skeleton
+                      h="16px"
+                      w="100%"
+                      startColor="orange.300"
+                      endColor="pink.200"
+                      mb="15px"
+                    />
+                    <Skeleton h="16px" w="85%" mb="15px" />
+                    <Skeleton h="30px" mb="15px" w="55%" />
+                    <Flex mb="15px">
+                      {Array(5)
+                        .fill("")
+                        .map(() => (
+                          <SkeletonCircle
+                            endColor="yellow.100"
+                            startColor="gold"
+                            mr="5px"
+                            size="15px"
+                          />
+                        ))}
+                    </Flex>
+                    <Skeleton h="20px" mb="15px" w="30%" />
+                    <Skeleton h="30px" mb="15px" w="100%" endColor="gray.600" />
+                  </Box>
+                ))}
+            </SimpleGrid>
           ) : (
             <SimpleGrid w="100%" columns={[2, 2, 3]} spacing="40px" pt="10">
               {products.map((p, i) => {
@@ -473,6 +507,7 @@ const Shop = () => {
           </ModalContent>
         </Modal>
       </Flex>
+
       <Footer />
     </>
   );
