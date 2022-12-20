@@ -5,6 +5,8 @@ Skinstore is a skin & beuty related website which helps you to find the differen
 
 Visit : skin-store-clone-three.vercel.app/
 
+## Responsive for all screen sizes
+
 ## Languages Used
 
 Skinstore webiste looks very amazing and introduced with various type of languages like JavaScript, HTML, CSS etc. There are the some important details regarding with this project which is mentioned below:
@@ -14,7 +16,9 @@ Skinstore webiste looks very amazing and introduced with various type of languag
  <ol dir="auto">◉ HTML : 20.9%</ol>
  <ol dir="auto">◉ CSS : 10.0%</ol>
  </ul>
+ 
  ## Functionalities
+ 
  <ul dir="auto">
  
  <ol dir="auto">◉ Sort By price </ol>
@@ -27,6 +31,9 @@ Skinstore webiste looks very amazing and introduced with various type of languag
  </ul>
  
  ## Admin account details(Admin Email and Password)
+ 
+ <p>you can add products by admin account and all the users can see the product on latest page(which contain all the latest items)</p>
+ 
   <ul dir="auto">
  
  <ol dir="auto">admin email - priyank@admin.gmail.com</ol>
