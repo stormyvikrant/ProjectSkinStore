@@ -10,9 +10,27 @@ Visit :
 Skinstore webiste looks very amazing and introduced with various type of languages like JavaScript, HTML, CSS etc. There are the some important details regarding with this project which is mentioned below:
 
 <ul dir="auto">
- <ol dir="auto">◉ JavaScript : 47.1%</ol>
- <ol dir="auto">◉ HTML : 35.9%</ol>
- <ol dir="auto">◉ CSS : 24.0%</ol>
+ <ol dir="auto">◉ JavaScript : 65.1%</ol>
+ <ol dir="auto">◉ HTML : 20.9%</ol>
+ <ol dir="auto">◉ CSS : 10.0%</ol>
+ </ul>
+ <ul dir="auto">
+ <ol dir="auto">Functionalities</ol>
+ <ol dir="auto">Sort By price </ol>
+ <ol dir="auto">Sort By Brand</ol>
+ <ol dir="auto">Sort By Category</ol>
+ <ol dir="auto">Cart Functionality (like adding an item and removing) </ol>
+ <ol dir="auto">Admin Page</ol>
+ <ol dir="auto">Admin can add a product product Will be shown on the latest page </ol>
+ <ol dir="auto">Login and Sign Up </ol>
+ </ul>
+ 
+ ## Admin account details(Admin Email and Password)
+  <ul dir="auto">
+ 
+ <ol dir="auto">admin email - priyank@admin.gmail.com</ol>
+ <ol dir="auto">password - admin123</ol>
+ 
  </ul>
 
 This report is provided by the Github language used stats. So, this is the total percentage of the coding languages. Now we explain our project in details.
