@@ -20,6 +20,7 @@ const Admin = () => {
 
 
     }
+    console.log(1);
     const handleImage = async () => {
         setLoading(true)
         let form = new FormData();
