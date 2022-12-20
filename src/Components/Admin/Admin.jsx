@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Box, Button, Image, Flex, Text, FormControl, FormLabel, Heading, Input, useToast, Icon, IconButton } from '@chakra-ui/react'
 import { CheckCircleIcon, WarningIcon } from '@chakra-ui/icons';
+import { Navigate, useNavigate } from 'react-router-dom';
 const intdata = {
     name: "",
     price: "",
@@ -11,13 +12,15 @@ const Admin = () => {
     const [data, setData] = useState(intdata);
     const imgref = useRef();
     const [loading, setLoading] = useState(false);
-    const toast = useToast()
+    const toast = useToast();
+    const navigate = useNavigate()
     const handleChange = (e) => {
         const { name, value } = e.target;
         setData({ ...data, [name]: value });
 
 
     }
+    console.log(1);
     const handleImage = async () => {
         setLoading(true)
         let form = new FormData();
@@ -70,6 +73,7 @@ const Admin = () => {
             }
 
         }).then(setData(intdata));
+        navigate("/latest")
 
 
 
