@@ -1,9 +1,9 @@
 ## Project Name - permissible-jump-1162
 Skinstore is a skin & beuty related website which helps you to find the different kinds of the products. SkinStore is part of THG Holdings plc, a globally renowned end-to-end tech platform specializing in taking brands direct to consumers across the globe. Using its proprietary technology and infrastructure, THG Ingenuity, the Group enables brands to grow at scale while driving unrivalled value and continuous performance.
 
-## Netlify Link
+## Deployed Link
 
-Visit : 
+Visit : skin-store-clone-three.vercel.app/
 
 ## Languages Used
 
@@ -14,15 +14,16 @@ Skinstore webiste looks very amazing and introduced with various type of languag
  <ol dir="auto">◉ HTML : 20.9%</ol>
  <ol dir="auto">◉ CSS : 10.0%</ol>
  </ul>
+ ## Functionalities
  <ul dir="auto">
- <ol dir="auto">Functionalities</ol>
- <ol dir="auto">Sort By price </ol>
- <ol dir="auto">Sort By Brand</ol>
- <ol dir="auto">Sort By Category</ol>
- <ol dir="auto">Cart Functionality (like adding an item and removing) </ol>
- <ol dir="auto">Admin Page</ol>
- <ol dir="auto">Admin can add a product product Will be shown on the latest page </ol>
- <ol dir="auto">Login and Sign Up </ol>
+ 
+ <ol dir="auto">◉ Sort By price </ol>
+ <ol dir="auto">◉ Sort By Brand</ol>
+ <ol dir="auto">◉ Sort By Category</ol>
+ <ol dir="auto">◉ Cart Functionality (like adding an item and removing) </ol>
+ <ol dir="auto">◉ Admin Page</ol>
+ <ol dir="auto">◉ Admin can add a product product Will be shown on the latest page </ol>
+ <ol dir="auto">◉ Login and Sign Up </ol>
  </ul>
  
  ## Admin account details(Admin Email and Password)
@@ -50,23 +51,8 @@ Navigation Bar is the topmost layer or bar of our website. In this bar, you find
 
 ![image](https://user-images.githubusercontent.com/97522154/208038091-dfbe02c0-d7ae-4fce-88c6-5cab2a7d40d1.png)
 
-
-### Shop By Category
-
-This is one of the most important section after the slider. Here you find the different kinds of populer Categories which helps to find your product easily. Take a look on that.
-
-![image](https://user-images.githubusercontent.com/97522154/208037470-2e84c1dc-794e-4fca-ac1e-9053b8353379.png)
-
-### SkinCare Page Overview
-
-This is an overview of the Page. Where you can get the details inforamtion about the page. After clicking on certain element you easily move to the Main Products Page of Skin Care.
-
-![image](https://user-images.githubusercontent.com/97522154/208038383-a256579b-d0be-4868-9f86-baeb4120d75d.png)
-
-## Cart Page
-
 It is a cart Page where you find the different kinds of the products which products you added in your cart. Take a look on that.
-![image](https://user-images.githubusercontent.com/97522154/208039210-3284dcbd-d317-49e1-8d3f-acbbd964f77f.png)
+![image](https://i.ibb.co/tsmj9hS/Screenshot-295.png)
 
 ## Footer
 
