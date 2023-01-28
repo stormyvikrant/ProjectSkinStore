@@ -1,7 +1,9 @@
 import {
   ADD_TO_CART,
+  DEC_QUANTITY,
   DELETE_FROM_CART,
   GET_CART_PRODUCTS,
+  INC_QUANTITY,
   RESET_CART,
 } from "./cart.action.types";
 
@@ -29,6 +31,20 @@ const cartReducer = (state = initialState, { type, payload }) => {
     case RESET_CART: {
       localStorage.setItem("cartItems", JSON.stringify([]));
       return { ...state, products: [] };
+    }
+    case INC_QUANTITY: {
+      let updatedCart = state.products.map((p) =>
+        p.id != payload ? p : { ...p, quantity: p.quantity + 1 }
+      );
+      localStorage.setItem("cartItems", JSON.stringify(updatedCart));
+      return { ...state, products: [...updatedCart] };
+    }
+    case DEC_QUANTITY: {
+      let updatedCart = state.products.map((p) =>
+        p.id != payload ? p : { ...p, quantity: p.quantity - 1 }
+      );
+      localStorage.setItem("cartItems", JSON.stringify(updatedCart));
+      return { ...state, products: [...updatedCart] };
     }
     default: {
       return state;
