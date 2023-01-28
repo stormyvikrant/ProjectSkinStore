@@ -112,8 +112,9 @@ const Shop = () => {
   let [brand, setBrand] = useState("");
   let [category, setCategory] = useState("foundation");
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [modalProps, setModalProps] = useState({});
+  const [modalProps, setModalProps] = useState({ quantity: 1 });
   const toast = useToast();
+  console.log(modalProps);
   const cartProducts = useSelector((state) => state.cartManager.products);
   let cartTotal = cartProducts.reduce((acc, p) => {
     return acc + Number(p.price);
@@ -137,7 +138,7 @@ const Shop = () => {
     }
   };
   const handleModal = (data) => {
-    setModalProps(data);
+    setModalProps({ ...modalProps, ...data });
     onOpen();
   };
   const handleAdd = (data) => {
@@ -182,7 +183,12 @@ const Shop = () => {
 
   return (
     <>
-      <Flex w="90%" m="auto" justify="space-between" mt={["12","12","12","12","auto"]}>
+      <Flex
+        w="90%"
+        m="auto"
+        justify="space-between"
+        mt={["12", "12", "12", "12", "auto"]}
+      >
         <Box
           w="25%"
           display={["none", "none", "block"]}
